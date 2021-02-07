@@ -1,0 +1,5 @@
+@mixin optional-at-root($selector) {
+  @at-root #{if(not &, $selector, selector-append(&, $selector))} {
+    @content;
+  }
+}

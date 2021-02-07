@@ -1,0 +1,11 @@
+/// Module export mixin
+/// This mixin helps creating our h2 texts making sure a module is imported once and only once.
+/// @access public
+/// @param {String} $color - color the font should take
+@mixin headline-2($color: var(--text-color)) {
+  margin-bottom: 1.5rem;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: $color;
+}

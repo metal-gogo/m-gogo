@@ -1,0 +1,8 @@
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("objects/body_without_scroll") {
+  .body--is-without-scroll {
+    position: fixed;
+    overflow-y: hidden;
+  }
+}

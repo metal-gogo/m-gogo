@@ -1,0 +1,9 @@
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/reboot_content_grouping") {
+  hr {
+    box-sizing: content-box; // Add the correct box sizing in Firefox.
+    height: 0; // Add the correct box sizing in Firefox.
+    overflow: visible; // Show the overflow in Edge.
+  }
+}

@@ -1,0 +1,12 @@
+/// Module export mixin
+/// This mixin helps creating our h4 texts making sure a module is imported once and only once.
+/// @access public
+/// @param {String} $color - color the font should take
+@mixin headline-4($color: var(--text-color)) {
+  display: flex;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.11;
+  color: $color;
+  letter-spacing: 0.015rem;
+}

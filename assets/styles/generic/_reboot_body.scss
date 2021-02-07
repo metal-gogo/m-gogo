@@ -1,0 +1,29 @@
+@import "@/assets/styles/settings/variables";
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/reboot_body") {
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0; // Remove default body margin of 8px
+    overflow-x: hidden;
+    font-family: "Crimson Pro", // Main font for the content
+        -apple-system, // Safari for OS X and iOS (San Francisco)
+        system-ui, // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+        BlinkMacSystemFont, // Chrome < 56 for OS X (San Francisco)
+        "Segoe UI", // Windows
+        Roboto, // Android
+        Garamond, // Basic web fallback
+        serif,
+        "Apple Color Emoji", // iOS and macOS emojis
+        "Segoe UI Emoji", // windows > 7 emojis
+        "Segoe UI Symbol"; // windows 7 emojis
+
+    color: var(--text-color); // Base text color
+    text-align: left; //Set an explicit initial text-align value so that we can later use the `inherit` value on things like `<th>` elements.
+    // As a best practice, apply a default `background-color`.
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

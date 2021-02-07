@@ -1,0 +1,15 @@
+/// Module export mixin
+/// This mixin helps creating a practically hidden element. It's important to note that this
+/// mixin will hide the element for the user, but will be kept available to screen readers
+/// and other assistive technology users. They are hidden with CSS, but they remain on the DOM.
+/// @access public
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}

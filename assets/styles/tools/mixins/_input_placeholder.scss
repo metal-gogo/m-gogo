@@ -1,0 +1,61 @@
+@import "./optional_at_root";
+
+@mixin input-placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------*\
+  USAGE:
+  .foo {
+    @include input-placeholder {
+      color: blueviolet;
+    }
+  }
+
+  @include input-placeholder {
+    color: violet;
+  }
+\*------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------*\
+  OUTPUT:
+  .foo::-webkit-input-placeholder {
+    color: blueviolet;
+  }
+  .foo:-moz-placeholder {
+    color: blueviolet;
+  }
+  .foo::-moz-placeholder {
+    color: blueviolet;
+  }
+  .foo:-ms-input-placeholder {
+    color: blueviolet;
+  }
+
+  ::-webkit-input-placeholder {
+    color: violet;
+  }
+  :-moz-placeholder {
+    color: violet;
+  }
+  ::-moz-placeholder {
+    color: violet;
+  }
+  :-ms-input-placeholder {
+    color: violet;
+  }
+\*------------------------------------------------------------------------------------------------------------ */

@@ -1,0 +1,13 @@
+/// Module export mixin
+/// This mixin helps creating an element to take the the whole height of the screen.
+/// --vh should be set by the JS, thats why it doesn't appear on settins/variables
+/// please import the /src/utils/setVH100.js file whenever you use this mixin.
+/// @access public
+/// @param {String} $heightAdjustment - a height adjustment for header or footer
+@mixin vh-100($heightAdjustment: "0rem") {
+  min-height: calc(
+    100vh - #{$heightAdjustment}
+  ); /* Fallback for browsers that do not support Custom Properties */
+
+  min-height: calc((var(--vh, 1vh) * 100 - #{$heightAdjustment}));
+}

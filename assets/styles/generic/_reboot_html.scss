@@ -1,0 +1,30 @@
+@import "@/assets/styles/settings/variables";
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/reboot_html") {
+  // 1. Set `box-sizing: border-box` so that `width` is not affected by `padding` or `border`.
+  // 2. Correct the line height in all browsers.
+  // 3. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+  // 4. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
+  //    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+  // 5. Change the default tap highlight to be completely transparent in iOS.
+  html {
+    box-sizing: border-box; // 1
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 18px; // Base font
+    font-weight: 400; // Base font-weight for everything
+    line-height: 1.5; // Base line-height
+    line-height: 1.15; // 2
+    -ms-overflow-style: scrollbar; // 4
+    -webkit-tap-highlight-color: $transparent; // 5
+    text-size-adjust: 100%; // 3
+  }
+
+  // All elements should inherit the `box-sizing: border-box`, unless it needs an exception.
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+}

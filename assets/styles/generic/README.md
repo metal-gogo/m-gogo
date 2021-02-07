@@ -1,0 +1,3 @@
+# ITCSS Generic
+
+The **Generic** layer is used to reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.

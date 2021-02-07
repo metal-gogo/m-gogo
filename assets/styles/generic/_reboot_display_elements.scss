@@ -1,0 +1,39 @@
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/reboot_display_elements") {
+  /* ------------------------------------------------------------------------------------------------------------*\
+        Recommended tags for `display: block`:
+        `article`, `aside`, `figcaption`, `figure`, `footer`, `header`, `hgroup`, `main`, `nav`, `section`
+  \*------------------------------------------------------------------------------------------------------------ */
+  article,
+  aside,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+
+  output {
+    display: inline-block;
+  }
+
+  summary {
+    display: list-item; // Add the correct display in all browsers
+    cursor: pointer;
+  }
+
+  template {
+    display: none; // Add the correct display in IE
+  }
+
+  // Always hide an element with the `hidden` HTML attribute (from PureCSS).
+  // Needed for proper display in IE 10-.
+  [hidden] {
+    display: none !important;
+  }
+}

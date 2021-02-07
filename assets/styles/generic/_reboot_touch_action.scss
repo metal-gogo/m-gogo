@@ -1,0 +1,20 @@
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/reboot_touch_action") {
+  /* ------------------------------------------------------------------------------------------------------------*\
+        `touch-action: manipulation` to speed up any delay that might exist for touch users normally include
+        the tags: `a`, `area`, `button`, `[role="button"]`, `input:not([type=range])`,
+        `label`, `select`, `summary`, `textarea`
+  \*------------------------------------------------------------------------------------------------------------ */
+  a,
+  area,
+  button,
+  [role="button"],
+  input:not([type="range"]),
+  label,
+  select,
+  summary,
+  textarea {
+    touch-action: manipulation;
+  }
+}

@@ -1,0 +1,21 @@
+@import "@/assets/styles/settings/variables";
+@import "@/assets/styles/tools/mixins/import_once";
+
+@include import-once("generic/custom_properties") {
+  :root {
+    --text-color: #{$light-color};
+    --bg-color: #{$dark-color};
+    --accent: #{$accent};
+    --info: #{$info};
+    --success: #{$success};
+    --warning: #{$warning};
+    --error: #{$error};
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --text-color: #{$dark-color};
+      --bg-color: #{$light-color};
+    }
+  }
+}

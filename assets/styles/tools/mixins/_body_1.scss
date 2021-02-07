@@ -1,0 +1,11 @@
+/// Module export mixin
+/// This mixin helps creating our body texts making sure a module is imported once and only once.
+/// @access public
+/// @param {String} $color - color the font should take
+@mixin body-1($color: var(--text-color)) {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $color;
+}
