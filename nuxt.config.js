@@ -4,11 +4,16 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'm-gogo | Random blog',
+    title: 'm-gogo | Blog about my random thoughts',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "Blog about anything that pops into my mind. Probably you will find some tech content here since I'm a Software Engineer.",
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -63,6 +68,16 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
+
+  // Generate static files (https://content.nuxtjs.org/advanced/)
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content({ deep: true }).only(['path']).fetch()
+
+      return files.map((file) => (file.path === '/index' ? '/' : file.path))
+    },
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
