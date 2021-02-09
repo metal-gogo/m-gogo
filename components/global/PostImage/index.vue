@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .post-image {
   padding: 0 1rem;
   margin: 0 0 1rem;
