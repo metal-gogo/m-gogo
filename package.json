@@ -11,7 +11,11 @@
     "lint:css": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
-    "test": "jest"
+    "test": "npm run test:unit",
+    "test:ci": "npm run test:unit:ci",
+    "test:unit": "jest",
+    "test:unit:watch": "npm run test:unit -- --verbose --watchAll",
+    "test:unit:ci": "npm run test:unit -- --ci"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
