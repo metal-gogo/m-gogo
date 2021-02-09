@@ -41,7 +41,8 @@
     color: inherit;
     text-decoration: none;
     cursor: pointer;
-    border-bottom: 0.125rem solid $transparent;
+    border-bottom: 0.125rem solid var(--accent);
+    border-radius: 6px;
     transition: border-bottom 0.3s ease-in-out;
 
     &:hover,
@@ -59,5 +60,9 @@
   b,
   strong {
     font-weight: bold; // Add the correct font weight in Chrome, Edge, and Safari
+  }
+
+  code {
+    background-color: var(--accent);
   }
 }

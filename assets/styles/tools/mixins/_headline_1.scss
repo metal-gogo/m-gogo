@@ -3,9 +3,9 @@
 /// @access public
 /// @param {String} $color - color the font should take
 @mixin headline-1($color: var(--text-color)) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 2.5rem;
-  line-height: 1.3;
+  line-height: 1;
   color: $color;
 }
