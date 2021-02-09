@@ -1,5 +1,5 @@
 <template>
-  <nuxt-content :document="post" />
+  <nuxt-content :document="post" class="article-content" />
 </template>
 
 <script>
