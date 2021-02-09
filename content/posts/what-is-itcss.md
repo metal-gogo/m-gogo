@@ -1,8 +1,11 @@
-# What is ITCSS?
+---
+title: What is ITCSS?
+description: In depth explanation on how does ITCSS provides a sane and scalable architecture for CSS
+---
 
 **ITCSS** refers to Inverted Triangle CSS, a term introduced by [Harry Roberts (@csswizardry)][csswizardry], to deal with the increasing complexity of managing projects with CSS. This methodology helps you organize your CSS projects in a sane and scalable manner.
 
-Before diving deep into ITCSS, I want to review the three aspects of CSS
+Before diving deep into **ITCSS**, I want to review the three aspects of CSS
 that it tries to address: CSS global scope, Selectors specificity, and CSS
 cascade.
 

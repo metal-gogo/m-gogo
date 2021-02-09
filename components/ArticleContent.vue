@@ -22,12 +22,6 @@ export default {
 .nuxt-content {
   max-width: 100%;
 
-  h1 {
-    width: fit-content;
-    border-bottom: 0.25rem solid var(--accent);
-    border-radius: 6px;
-  }
-
   hr {
     height: 2px;
     margin: 2.5rem 0;
