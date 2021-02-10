@@ -1,5 +1,7 @@
 import { mount } from '@vue/test-utils'
 
+import CldImageStub from '@/tests/unit/stubs/CldImageStub'
+
 import PostImage from './index.vue'
 
 describe('@/components/global/PostImage', () => {
@@ -7,6 +9,8 @@ describe('@/components/global/PostImage', () => {
     src: '/images/posts/dummy-article/image.png',
     alt: 'Description of the image',
     title: 'Title of the image',
+    width: 200,
+    height: 200,
   }
   const rootTag = 'FIGURE'
   const rootClass = 'post-image'
@@ -16,6 +20,11 @@ describe('@/components/global/PostImage', () => {
   beforeEach(() => {
     wrapper = mount(PostImage, {
       propsData: sampleProps,
+      stubs: {
+        'client-only': true,
+        'cld-image': CldImageStub,
+        'cld-placeholder': true,
+      },
     })
   })
 
@@ -27,9 +36,9 @@ describe('@/components/global/PostImage', () => {
     expect(wrapper.classes()).toContain(rootClass)
   })
 
-  it('must render an image with the "src" passed as prop', () => {
+  it('must render an image to contain "src" passed as prop', () => {
     const img = wrapper.find('img')
-    expect(img.attributes('src')).toBe(sampleProps.src)
+    expect(img.attributes('src')).toContain(sampleProps.src)
   })
 
   it('must render an image with the "alt" passed as prop', () => {
