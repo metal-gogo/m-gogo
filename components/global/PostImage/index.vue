@@ -4,8 +4,9 @@
       <cld-image class="post-image__img-container" :public-id="src" :alt="alt">
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
         <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />
-        <cld-transformation crop="scale" gravity="faces" />
+        <cld-transformation :crop="cropType" :gravity="gravityType" />
         <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
+        <cld-transformation :effect="effectType" />
       </cld-image>
     </client-only>
     <figcaption class="post-image__figcaption">{{ title }}</figcaption>
@@ -19,6 +20,18 @@ export default {
     alt: {
       type: String,
       required: true,
+    },
+    cropType: {
+      type: String,
+      default: 'scale',
+    },
+    effectType: {
+      type: String,
+      default: 'sharpen',
+    },
+    gravityType: {
+      type: String,
+      default: 'faces',
     },
     placeholderType: {
       type: String,
