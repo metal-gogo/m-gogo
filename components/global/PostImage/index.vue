@@ -3,10 +3,12 @@
     <client-only placeholder="Loading image">
       <cld-image
         class="post-image__img-container"
+        client-hints="true"
         :public-id="src"
         :alt="alt"
         :width="width"
         :height="height"
+        progressive
       >
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
         <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />

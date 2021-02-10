@@ -145,7 +145,7 @@ entire project.
 
 As you can see, the **specificity** should be growing towards the end of the graph. Additionally, you can take on that spikes are not great, however, in a real-life codebase you should see some spikes on the end; but that is perfectly fine since we will want to have some component-based **specificity** there.
 
-<post-image src="/images/posts/what-is-itcss/demo_specificity_graph" alt="A line graph without a big increment towards the end" title="The specificity graph of this website at the time of writing this article." width="1832"></post-image>
+<post-image src="/images/posts/what-is-itcss/demo_specificity_graph" alt="A line graph without a big increment towards the end" title="The specificity graph of this website at the time of writing this article." width="1832" height="718"></post-image>
 
 You may notice that there is no real increment in the specificity on this website specificity graph. This is due to the early stage of the blog. So until now, I have not needed to add a lot of styling for specific components, therefore we don't see the expected spikes on the end of the graph. However, the approach using **ITCSS** provides a predictable graph on the website 🤓.
 
