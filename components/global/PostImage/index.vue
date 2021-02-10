@@ -13,7 +13,7 @@
       >
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
         <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
-        <cld-transformation responsive="width" :width="auto" dpr="auto" />
+        <cld-transformation responsive="width" width="auto" dpr="auto" />
         <cld-transformation :crop="cropType" :gravity="gravityType" />
         <cld-transformation :effect="effectType" />
       </cld-image>
