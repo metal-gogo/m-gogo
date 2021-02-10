@@ -1,7 +1,12 @@
 <template>
   <figure class="post-image">
     <client-only placeholder="Loading image">
-      <cld-image class="post-image__img-container" :public-id="src" :alt="alt">
+      <cld-image
+        class="post-image__img-container"
+        :public-id="src"
+        :alt="alt"
+        :width="fileWidth"
+      >
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
         <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />
         <cld-transformation :crop="cropType" :gravity="gravityType" />
