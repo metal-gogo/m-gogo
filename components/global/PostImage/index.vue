@@ -1,6 +1,23 @@
 <template>
   <figure class="post-image">
-    <img class="post-image__img" :src="src" :alt="alt" />
+    <client-only placeholder="Loading image">
+      <cld-image
+        class="post-image__img-container"
+        client-hints="true"
+        sizes="100vw"
+        :public-id="src"
+        :alt="alt"
+        :width="width"
+        :height="height"
+        progressive
+      >
+        <cld-placeholder :type="placeholderType" :responsive="responsive" />
+        <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
+        <cld-transformation responsive="width" width="auto" dpr="auto" />
+        <cld-transformation :crop="cropType" :gravity="gravityType" />
+        <cld-transformation :effect="effectType" />
+      </cld-image>
+    </client-only>
     <figcaption class="post-image__figcaption">{{ title }}</figcaption>
   </figure>
 </template>
@@ -13,6 +30,30 @@ export default {
       type: String,
       required: true,
     },
+    cropType: {
+      type: String,
+      default: 'scale',
+    },
+    effectType: {
+      type: String,
+      default: 'sharpen',
+    },
+    gravityType: {
+      type: String,
+      default: 'faces',
+    },
+    height: {
+      type: Number,
+      required: true,
+    },
+    placeholderType: {
+      type: String,
+      default: 'blur',
+    },
+    responsive: {
+      type: Boolean,
+      default: false,
+    },
     src: {
       type: String,
       required: true,
@@ -21,12 +62,19 @@ export default {
       type: String,
       required: true,
     },
+    width: {
+      type: Number,
+      required: true,
+    },
   },
 }
 </script>
 
 <style lang="scss">
 .post-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 1rem;
   margin: 0 0 1rem;
 
@@ -35,7 +83,8 @@ export default {
   }
 }
 
-.post-image__img {
+.post-image__img-container {
+  overflow: hidden;
   border: 2px solid var(--accent);
   border-radius: 6px;
 }
