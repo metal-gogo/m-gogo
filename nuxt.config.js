@@ -11,6 +11,9 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'm-gogo | Blog about my random thoughts',
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,6 +22,10 @@ export default {
         name: 'description',
         content:
           "Blog about anything that pops into my mind. Probably you will find some tech content here since I'm a Software Engineer.",
+      },
+      {
+        'http-equiv': 'Accept-CH',
+        content: 'DPR, Viewport-Width, Width',
       },
     ],
     link: [

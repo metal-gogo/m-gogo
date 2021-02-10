@@ -3,7 +3,8 @@
     <client-only placeholder="Loading image">
       <cld-image class="post-image__img-container" :public-id="src" :alt="alt">
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
-        <cld-transformation :width="width" :height="height" crop="scale" />
+        <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />
+        <cld-transformation crop="scale" gravity="faces" />
         <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
       </cld-image>
     </client-only>
@@ -17,10 +18,6 @@ export default {
   props: {
     alt: {
       type: String,
-      required: true,
-    },
-    height: {
-      type: Number,
       required: true,
     },
     placeholderType: {
@@ -42,6 +39,13 @@ export default {
     width: {
       type: Number,
       required: true,
+    },
+  },
+  computed: {
+    fileWidth() {
+      const maxWidth = 698
+
+      return Math.min(this.width, maxWidth)
     },
   },
 }
