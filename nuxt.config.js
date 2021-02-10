@@ -85,6 +85,7 @@ export default {
     cloudName: process.env.CLOUDINARY_CLOUD,
     apiKey: process.env.CLOUDINARY_API_KEY,
     apiSecret: process.env.CLOUDINARY_API_SECRET,
+    useComponent: true,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

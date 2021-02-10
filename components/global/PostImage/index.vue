@@ -1,6 +1,12 @@
 <template>
   <figure class="post-image">
-    <img class="post-image__img" :src="src" :alt="alt" />
+    <client-only placeholder="Loading image">
+      <cld-image class="post-image__img-container" :public-id="src" :alt="alt">
+        <cld-placeholder :type="placeholderType" :responsive="responsive" />
+        <cld-transformation :width="width" :height="height" crop="scale" />
+        <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
+      </cld-image>
+    </client-only>
     <figcaption class="post-image__figcaption">{{ title }}</figcaption>
   </figure>
 </template>
@@ -13,6 +19,18 @@ export default {
       type: String,
       required: true,
     },
+    height: {
+      type: Number,
+      required: true,
+    },
+    placeholderType: {
+      type: String,
+      default: 'blur',
+    },
+    responsive: {
+      type: Boolean,
+      default: false,
+    },
     src: {
       type: String,
       required: true,
@@ -21,12 +39,19 @@ export default {
       type: String,
       required: true,
     },
+    width: {
+      type: Number,
+      required: true,
+    },
   },
 }
 </script>
 
 <style lang="scss">
 .post-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 1rem;
   margin: 0 0 1rem;
 
@@ -35,7 +60,8 @@ export default {
   }
 }
 
-.post-image__img {
+.post-image__img-container {
+  overflow: hidden;
   border: 2px solid var(--accent);
   border-radius: 6px;
 }

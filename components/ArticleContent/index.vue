@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss">
 .nuxt-content-container {
+  width: 100%;
   max-width: 100%;
 }
 
