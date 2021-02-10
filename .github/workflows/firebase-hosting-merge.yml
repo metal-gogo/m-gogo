@@ -21,3 +21,6 @@ jobs:
           projectId: m-gogo
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          CLOUDINARY_CLOUD: '${{ secrets.CLOUDINARY_CLOUD }}'
+          CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
+          CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
