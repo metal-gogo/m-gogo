@@ -1,3 +1,9 @@
+import {
+  getContentRoutes,
+  insertFeaturedImageToPost,
+  uploadImagesToCloudinary,
+} from './utils/config'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -65,23 +71,38 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://cloudinary.nuxtjs.org/
+    '@nuxtjs/cloudinary',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
 
-  // Generate static files (https://content.nuxtjs.org/advanced/)
-  generate: {
-    async routes() {
-      const { $content } = require('@nuxt/content')
-      const files = await $content({ deep: true }).only(['path']).fetch()
-
-      return files.map((file) => (file.path === '/index' ? '/' : file.path))
-    },
-  },
-
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
 
+  // Cloudinary module configuration (https://cloudinary.nuxtjs.org/options/)
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_CLOUD,
+    apiKey: process.env.CLOUDINARY_API_KEY,
+    apiSecret: process.env.CLOUDINARY_API_SECRET,
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  hooks: {
+    'content:file:beforeInsert': async (document) => {
+      await insertFeaturedImageToPost(document)
+    },
+    'build:before': async (nuxt) => {
+      await uploadImagesToCloudinary()
+    },
+  },
+
+  // Generate static files (https://content.nuxtjs.org/advanced/)
+  generate: {
+    async routes() {
+      return await getContentRoutes()
+    },
+  },
 }
