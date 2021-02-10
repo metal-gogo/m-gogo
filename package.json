@@ -17,21 +17,12 @@
     "test:unit:watch": "npm run test:unit -- --verbose --watchAll",
     "test:unit:ci": "npm run test:unit -- --ci"
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
+    "@nuxtjs/cloudinary": "^1.0.3-beta-3",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
+    "glob": "^7.1.6",
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
@@ -50,7 +41,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "fibers": "^5.0.0",
-    "husky": "^4.3.7",
+    "husky": "^5.0.9",
     "jest": "^26.5.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
