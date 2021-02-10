@@ -14,7 +14,7 @@ export default {
     return { post }
   },
   head() {
-    const { title, description } = this.post
+    const { title, description, featuredImageUrl } = this.post
 
     return {
       title: `m-gogo | ${title}`,
@@ -30,6 +30,11 @@ export default {
           hid: 'og:description',
           property: 'og:description',
           content: description,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: featuredImageUrl,
         },
         // Twitter Card
         {
