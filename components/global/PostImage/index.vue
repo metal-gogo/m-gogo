@@ -4,6 +4,7 @@
       <cld-image
         class="post-image__img-container"
         client-hints="true"
+        sizes="100vw"
         :public-id="src"
         :alt="alt"
         :width="width"
@@ -11,9 +12,9 @@
         progressive
       >
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
-        <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />
-        <cld-transformation :crop="cropType" :gravity="gravityType" />
         <cld-transformation fetch-format="auto" quality="auto" loading="lazy" />
+        <cld-transformation responsive="width" :width="auto" dpr="auto" />
+        <cld-transformation :crop="cropType" :gravity="gravityType" />
         <cld-transformation :effect="effectType" />
       </cld-image>
     </client-only>
@@ -64,13 +65,6 @@ export default {
     width: {
       type: Number,
       required: true,
-    },
-  },
-  computed: {
-    fileWidth() {
-      const maxWidth = 698
-
-      return Math.min(this.width, maxWidth)
     },
   },
 }
