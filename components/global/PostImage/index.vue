@@ -5,7 +5,8 @@
         class="post-image__img-container"
         :public-id="src"
         :alt="alt"
-        :width="fileWidth"
+        :width="width"
+        :height="height"
       >
         <cld-placeholder :type="placeholderType" :responsive="responsive" />
         <cld-transformation responsive="width" :width="fileWidth" dpr="auto" />
@@ -37,6 +38,10 @@ export default {
     gravityType: {
       type: String,
       default: 'faces',
+    },
+    height: {
+      type: Number,
+      required: true,
     },
     placeholderType: {
       type: String,
