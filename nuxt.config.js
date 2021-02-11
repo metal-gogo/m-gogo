@@ -82,7 +82,14 @@ export default {
     '@nuxtjs/cloudinary',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/nuxt-community/svg-sprite-module
+    '@nuxtjs/svg-sprite',
   ],
+
+  // SVG Sprite module configuration (https://github.com/nuxt-community/svg-sprite-module#options)
+  svgSprite: {
+    elementClass: 'svg-icon',
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {
