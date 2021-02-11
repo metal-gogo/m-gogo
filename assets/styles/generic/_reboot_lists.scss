@@ -11,4 +11,11 @@
       margin-bottom: 0;
     }
   }
+
+  li {
+    ol,
+    ul {
+      padding-top: 0.5rem;
+    }
+  }
 }
