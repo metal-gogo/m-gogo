@@ -30,6 +30,8 @@
 
   li {
     @include body-2;
+
+    margin-bottom: 0.875rem;
   }
 
   // And undo these styles for placeholder links/named anchors (without href)
