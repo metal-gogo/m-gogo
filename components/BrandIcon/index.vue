@@ -1,5 +1,6 @@
 <template>
   <svg-icon
+    v-if="name"
     class="brand-icon"
     aria-labelledby="title"
     aria-describedby="desc"
