@@ -9,6 +9,8 @@ featuredImage: static/images/posts/what-is-itcss/ITCSS.jpg
 <!-- omit in toc -->
 ## Article content 
 
+<nav class="table-of-contents">
+
 - [CSS global scope](#css-global-scope)
 - [Selectors specificity](#selectors-specificity)
 - [CSS Cascade](#css-cascade)
@@ -25,6 +27,8 @@ featuredImage: static/images/posts/what-is-itcss/ITCSS.jpg
   - [Objects](#objects)
   - [Components](#components)
   - [Trumps / Utilities](#trumps--utilities)
+
+</nav>
 
 ---
 
