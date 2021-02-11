@@ -1,0 +1,8 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path d="M31 32.9V53"
+  stroke-width="2" stroke-miterlimit="10" stroke="#b18fcf" fill="none" data-name="layer2"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <circle stroke-width="2" stroke-miterlimit="10" stroke="#b18fcf"
+  fill="none" r="12" cy="20.9" cx="31" data-name="layer1" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+</svg>

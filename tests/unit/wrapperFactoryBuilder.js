@@ -78,6 +78,7 @@ function wrapperFactoryBuilder(
         'cld-placeholder': true,
         'client-only': true,
         'nuxt-content': true,
+        'svg-icon': true,
         ...defaultStubs,
         ...stubs,
       },

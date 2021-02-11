@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <circle data-name="layer1"
+  cx="24.2" cy="24.2" r="22.2" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
+  <path data-name="layer1" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" d="M39.9 39.9L62 62" stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>

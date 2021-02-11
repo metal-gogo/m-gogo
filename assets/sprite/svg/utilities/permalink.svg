@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer2"
+  d="M32 14.4l8.8-8.8a12.4 12.4 0 0 1 17.6 0 12.4 12.4 0 0 1 0 17.6L44.3 37.3a12.4 12.4 0 0 1-17.6 0 12.6 12.6 0 0 1-1.6-1.9"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" d="M32 49.6l-8.8 8.8a12.4 12.4 0 0 1-17.6 0 12.4 12.4 0 0 1 0-17.6l14.1-14.1a12.4 12.4 0 0 1 17.6 0 12.5 12.5 0 0 1 1.6 1.9"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <circle data-name="layer2"
+  cx="33.002" cy="34.991" r="19" fill="none" stroke="#b18fcf" stroke-linecap="round"
+  stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"></circle>
+  <circle data-name="layer2" cx="33.002" cy="34.991" r="11" fill="none"
+  stroke="#b18fcf" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+  stroke-linejoin="round"></circle>
+  <path data-name="layer1" d="M2 14v7.428c0 1.482 1.865 4.57 5.906 4.57 4.042 0 6.094-2.1 6.094-4.941V14m-5.999 0v38.001m47.999 0V14s5.999 8.367 5.999 22.001H56"
+  fill="none" stroke="#b18fcf" stroke-linecap="round" stroke-miterlimit="10"
+  stroke-width="2" stroke-linejoin="round"></path>
+</svg>
