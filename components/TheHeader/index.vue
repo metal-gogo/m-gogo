@@ -1,8 +1,7 @@
 <template>
   <header class="container the-header">
     <nuxt-link class="the-header__link-logo" to="/">
-      <brand-icon class="the-header__logo" :name="logo" title="m-gogo logo" />
-      <span class="the-header__link-text">Home</span>
+      <brand-icon class="the-header__logo" :name="logo" title="home" />
     </nuxt-link>
   </header>
 </template>
@@ -28,10 +27,6 @@ export default {
   &:hover {
     border: 0;
   }
-}
-
-.the-header__link-text {
-  @include visually-hidden;
 }
 
 .the-header__logo {

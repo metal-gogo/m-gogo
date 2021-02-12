@@ -1,14 +1,14 @@
 <template>
   <footer class="the-footer container">
-    <p class="the-footer__built-message">
-      <span>Built with</span>
+    <div class="the-footer__built-message">
+      <span>Crafted with</span>
       <brand-icon
         class="the-footer__heart-icon"
         :name="heart"
         title="heart icon"
       />
       <span>from Mexico</span>
-    </p>
+    </div>
     <the-footer-acknowledgments />
   </footer>
 </template>
