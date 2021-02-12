@@ -1,16 +1,10 @@
 <template>
-  <svg-icon
-    v-if="name"
+  <!-- eslint-disable vue/no-v-html -->
+  <picture
     class="brand-icon"
-    aria-labelledby="title"
-    aria-describedby="desc"
-    role="img"
-    :name="name"
-    :title="title"
-    :desc="desc"
-    :width="width"
-    :height="height"
+    v-html="require(`@/assets/svgs/${name}.svg?raw`)"
   />
+  <!-- eslint-enable vue/no-v-html -->
 </template>
 
 <script>
@@ -28,22 +22,24 @@ export default {
     },
     title: {
       type: String,
-      required: true,
+      default: '',
+      // required: true,
     },
     desc: {
       type: String,
       default: '',
     },
-    width: {
-      type: Number,
-      default: 48,
-    },
-    height: {
-      type: Number,
-      default() {
-        return this.width
-      },
-    },
   },
 }
 </script>
+
+<style lang="scss">
+.brand-icon {
+  display: block;
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>

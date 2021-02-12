@@ -1,4 +1,5 @@
 const availableIcons = [
+  'brand/logo',
   'categories/book-reviews',
   'categories/food',
   'categories/fuck-ups',
