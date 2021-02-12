@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer2"
+  d="M13.942 3.211l12.356 12.354a4.993 4.993 0 0 1 0 7.06l-4.885 4.884a4.994 4.994 0 0 1-7.06 0L2 15.152M41.306 42.27L61.035 62M8.095 9.057l22.942 22.942"
+  fill="none" stroke="#b18fcf" stroke-linecap="round" stroke-miterlimit="10"
+  stroke-width="2" stroke-linejoin="round"></path>
+  <path data-name="layer1" d="M4.564 58.47L57.507 5.529s-3.532 24.713-21.183 42.365l-10.59-10.59"
+  fill="none" stroke="#b18fcf" stroke-linecap="round" stroke-miterlimit="10"
+  stroke-width="2" stroke-linejoin="round"></path>
+</svg>

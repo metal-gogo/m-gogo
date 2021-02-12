@@ -1,6 +1,6 @@
 <template>
   <figure class="post-image">
-    <client-only placeholder="Loading image">
+    <client-only placeholder="Loading image...">
       <cld-image
         class="post-image__img-container"
         client-hints="true"

@@ -1,4 +1,9 @@
 {
+  "plugins": [
+    ["ramda", {
+      "useES": true
+    }]
+  ],
   "env": {
     "test": {
       "presets": [
@@ -10,7 +15,8 @@
             }
           }
         ]
-      ]
+      ],
+      "plugins": ["ramda"]
     }
   }
 }

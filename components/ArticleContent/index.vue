@@ -59,6 +59,7 @@ export default {
   code {
     @include body-2;
 
+    color: inherit;
     background-color: $transparent;
   }
 }

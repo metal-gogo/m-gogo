@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer2"
+  d="M32 38v10c0 4-6 8-10 8h-3a3 3 0 0 0-3 3v3h32v-3a3 3 0 0 0-3-3h-3c-4 0-10-4-10-8"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" d="M48 22.1a16 16 0 0 1-32 0V2h32z" fill="none"
+  stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" d="M16 7.9c-6-1.1-10 2.5-10 8S10.5 28 16 28h1.1M48 7.9c6-1.1 10 2.5 10 8S53.5 28 48 28h-1.1"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+</svg>

@@ -15,6 +15,7 @@ module.exports = {
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
   rules: {
+    'max-nesting-depth': 2,
     'selector-class-pattern': bemPattern,
     'selector-no-qualifying-type': [
       true,

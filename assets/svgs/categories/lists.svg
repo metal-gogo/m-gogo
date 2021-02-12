@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer2"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" d="M8 2h48v60H8zm12 0v8m-2 0h4m10-8v8m-2 0h4m10-8v8m-2 0h4"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" d="M18 20h28M18 30h28M18 40h28M18 50h20" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+</svg>

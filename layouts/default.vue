@@ -1,3 +1,7 @@
 <template>
-  <Nuxt />
+  <div>
+    <the-header />
+    <Nuxt />
+    <the-footer />
+  </div>
 </template>

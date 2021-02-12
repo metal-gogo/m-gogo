@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer1"
+  d="M47.5 32.4a14 14 0 0 1-16.8 17.2" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer2" d="M24.1 45.9a14 14 0 0 1 19.8-19.8M34 6v8M12 36H4m8-22l7 7"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" d="M55 15L13 57" stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>
