@@ -69,6 +69,10 @@ function wrapperFactoryBuilder(
         ...methods,
       },
       mocks: {
+        $colorMode: {
+          preference: 'dark',
+          value: 'dark',
+        },
         ...defaultMocks,
         ...mocks,
       },
