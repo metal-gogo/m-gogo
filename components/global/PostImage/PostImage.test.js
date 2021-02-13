@@ -1,6 +1,4 @@
-import { mount } from '@vue/test-utils'
-
-import CldImageStub from '@/tests/unit/stubs/CldImageStub'
+import wrapperFactoryBuilder from '@/tests/unit/wrapperFactoryBuilder.js'
 
 import PostImage from './index.vue'
 
@@ -12,20 +10,16 @@ describe('@/components/global/PostImage', () => {
     width: 200,
     height: 200,
   }
+  const wrapperFactory = wrapperFactoryBuilder(PostImage, {
+    props: sampleProps,
+  })
   const rootTag = 'FIGURE'
   const rootClass = 'post-image'
 
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(PostImage, {
-      propsData: sampleProps,
-      stubs: {
-        'client-only': true,
-        'cld-image': CldImageStub,
-        'cld-placeholder': true,
-      },
-    })
+    wrapper = wrapperFactory()
   })
 
   it(`must be wrapped on a "<${rootTag.toLowerCase()}>" tag`, () => {

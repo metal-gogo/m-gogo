@@ -72,6 +72,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -82,10 +84,18 @@ export default {
     '@nuxtjs/cloudinary',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-xonokai.css',
+      },
+    },
+  },
 
   // Cloudinary module configuration (https://cloudinary.nuxtjs.org/options/)
   cloudinary: {

@@ -1,5 +1,26 @@
 <template>
-  <div class="container">
-    <h1 class="title">m-gogo</h1>
+  <div>
+    <main class="container">
+      <h1 class="title">M-GoGo blog</h1>
+      <article-content :post="homepagePost" />
+    </main>
+    <aside class="container">
+      <post-list list-title="Latest posts" :posts="posts" />
+    </aside>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'IndexPage',
+  async asyncData({ $content, params }) {
+    const homepagePost = await $content('/', 'homepage').fetch()
+    const posts = await $content('posts')
+      .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+
+    return { homepagePost, posts }
+  },
+}
+</script>

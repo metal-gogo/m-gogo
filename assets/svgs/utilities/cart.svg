@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64">
+  <path data-name="layer2"
+  fill="none" stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" d="M18 23.5l10-10 10 10m8 0v-10h12v10"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer2" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" d="M36 21.5l7-17 7 3-2.4 6m-1.6 4l-2.4 6" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#b18fcf" stroke-miterlimit="10"
+  stroke-width="2" d="M2 7.5h10l10 40h32l8-24H16" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <circle data-name="layer1" cx="24" cy="55.5" r="4" fill="none"
+  stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+  <circle data-name="layer1" cx="50" cy="55.5" r="4" fill="none"
+  stroke="#b18fcf" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+</svg>

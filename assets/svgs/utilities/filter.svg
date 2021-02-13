@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="64" height="64">
+  <path data-name="layer1"
+  fill="none" stroke="#b18fcf" stroke-linecap="round" stroke-linejoin="round"
+  stroke-width="2" d="M2 6h60L38 32v20l-12 6V32L2 6z"></path>
+</svg>

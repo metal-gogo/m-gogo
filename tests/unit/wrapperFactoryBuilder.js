@@ -1,5 +1,7 @@
 import { mount, shallowMount, RouterLinkStub } from '@vue/test-utils'
 
+import CldImageStub from '@/tests/unit/stubs/CldImageStub'
+
 const { localVue } = global
 
 function handleComponentInRouteGuards(component, wrapper) {
@@ -67,12 +69,20 @@ function wrapperFactoryBuilder(
         ...methods,
       },
       mocks: {
+        $colorMode: {
+          preference: 'dark',
+          value: 'dark',
+        },
         ...defaultMocks,
         ...mocks,
       },
       stubs: {
         NuxtLink: RouterLinkStub,
+        'cld-image': CldImageStub,
+        'cld-placeholder': true,
+        'client-only': true,
         'nuxt-content': true,
+        'brand-icon': true,
         ...defaultStubs,
         ...stubs,
       },
