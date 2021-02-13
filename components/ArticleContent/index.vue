@@ -29,6 +29,21 @@ export default {
     background-color: var(--accent);
     border: 0;
   }
+
+  .post-image {
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0 0 1rem;
+
+    @media screen and (min-width: $breakpoint-small) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  .post-image__image-container {
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+  }
 }
 
 .nuxt-content-highlight {
