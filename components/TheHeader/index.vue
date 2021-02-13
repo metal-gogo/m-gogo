@@ -1,8 +1,9 @@
 <template>
   <header class="container the-header">
     <nuxt-link class="the-header__link-logo" to="/">
-      <brand-icon class="the-header__logo" :name="logo" title="home" />
+      <the-logo />
     </nuxt-link>
+    <color-mode-picker />
   </header>
 </template>
 
@@ -20,17 +21,26 @@ export default {
 </script>
 
 <style lang="scss">
-.the-header__link-logo {
-  border: 0;
-
-  &:focus,
-  &:hover {
-    border: 0;
-  }
+.the-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.the-header__logo {
-  width: 6.55rem;
-  height: 2.5rem;
+.the-header__link-logo {
+  border: 0;
+  outline: 2px dotted $transparent;
+  transition: outline 0.3s ease-in-out;
+
+  &:hover {
+    border: 0;
+    outline: 2px dotted $transparent;
+  }
+
+  &:focus {
+    border: 0;
+    outline: 2px dotted var(--accent);
+  }
 }
 </style>
