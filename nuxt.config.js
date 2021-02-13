@@ -96,6 +96,11 @@ export default {
       ogHost: 'https://mgogo.dev',
       'twitter:creator': '@metal_gogo',
     },
+    manifest: {
+      name: 'm-gogo | Blog about my random thoughts',
+      short_name: 'm-gogo',
+      background_color: '#160166',
+    },
   },
 
   // Cloudinary module configuration (https://cloudinary.nuxtjs.org/options/)
