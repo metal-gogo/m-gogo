@@ -1,13 +1,15 @@
 <template>
-  <article class="container">
-    <h1 class="title">{{ post.title }}</h1>
-    <article-content :post="post" />
-  </article>
+  <main>
+    <article class="container">
+      <h1 class="title">{{ post.title }}</h1>
+      <article-content :post="post" />
+    </article>
+  </main>
 </template>
 
 <script>
 export default {
-  name: 'PostSlug',
+  name: 'PostPage',
   async asyncData({ $content, params }) {
     const post = await $content('posts', params.slug).fetch()
 

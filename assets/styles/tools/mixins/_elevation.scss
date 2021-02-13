@@ -1,6 +1,6 @@
-$umbra-color: rgba(0, 0, 0, 0.2);
-$penumbra-color: rgba(0, 0, 0, 0.14);
-$ambient-shadow-color: rgba(0, 0, 0, 0.12);
+$umbra-color: rgba($african-violet, 0.5);
+$penumbra-color: rgba($african-violet, 0.28);
+$ambient-shadow-color: rgba($african-violet, 0.24);
 
 $elevation-levels: #{0 0 0 $umbra-color, 0 0 0 $penumbra-color, 0 0 0 $ambient-shadow-color},
   #{0px 1px 3px $umbra-color, 0 0 2px $penumbra-color, 0 2px 2px $ambient-shadow-color},

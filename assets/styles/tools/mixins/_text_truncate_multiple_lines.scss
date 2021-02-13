@@ -1,0 +1,13 @@
+/// Module export mixin
+/// @access public
+/// @param {Number} $number_of_lines - Number of lines before truncating text.
+@mixin text-truncate-multiple-lines($font_size: 1rem, $line_height: 1.5, $number_of_lines: 2) {
+  display: flex;
+  max-width: 400px;
+  height: $font-size * $line-height * $number_of_lines; // Fallback for non-webkit
+  overflow: hidden;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number_of_lines;
+}
