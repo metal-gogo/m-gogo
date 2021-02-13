@@ -3,7 +3,8 @@
 
 @include import_once('objects/title') {
   .title {
+    line-height: 0.75;
     border-bottom: 0.25rem solid $african-violet;
-    border-radius: 6px;
+    border-radius: 64px;
   }
 }

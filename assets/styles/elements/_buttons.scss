@@ -1,0 +1,26 @@
+@import '@/assets/styles/settings/variables';
+@import '@/assets/styles/tools/mixins/import_once';
+
+@include import_once('elements/buttons') {
+  button {
+    padding: 0.5rem 1rem;
+    color: $dark-color;
+    background-color: var(--accent);
+    border: 0;
+    border-radius: 64px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 3px dotted var(--accent);
+    }
+
+    &:hover {
+      background-color: $lavender-white;
+
+      .light-mode & {
+        color: $light-color;
+        background-color: $dark-color;
+      }
+    }
+  }
+}
