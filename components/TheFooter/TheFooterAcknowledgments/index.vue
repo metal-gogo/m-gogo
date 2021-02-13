@@ -40,7 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 
 .the-footer-acknowledgments__list {
@@ -54,5 +54,9 @@ export default {
 
 .the-footer-acknowledgments__list-item {
   margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 </style>

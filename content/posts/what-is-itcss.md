@@ -1,6 +1,6 @@
 ---
 title: What is ITCSS?
-description: In-depth explanation on how does ITCSS provides a sane and scalable architecture for CSS
+summary: In-depth explanation on how does ITCSS provides a sane and scalable architecture for CSS
 featuredImage: static/images/posts/what-is-itcss/ITCSS.jpg
 ---
 
