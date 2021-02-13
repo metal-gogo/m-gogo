@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <h1 class="title">m-gogo</h1>
+    <h1 class="title">M-GoGo blog</h1>
     <article-content :post="post" />
   </main>
 </template>
