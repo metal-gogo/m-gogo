@@ -1,4 +1,3 @@
-- uses: actions/checkout@v2
 - name: Create Sentry release
 'on':
   push:
