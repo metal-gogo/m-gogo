@@ -103,6 +103,9 @@ export default {
   sentry: {
     dsn: process.env.SENTRY_DSN,
     config: {
+      config: {
+        environment: process.env.ENVIRONMENT,
+      },
       tracing: {
         tracesSampleRate: 0.5,
         vueOptions: {
