@@ -13,14 +13,18 @@
 <script>
 export default {
   name: 'IndexPage',
-  async asyncData({ $content, params }) {
-    const homepagePost = await $content('/', 'homepage').fetch()
-    const posts = await $content('posts')
-      .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
+  async asyncData({ $content, params, $sentry }) {
+    try {
+      const homepagePost = await $content('/', 'homepage').fetch()
+      const posts = await $content('posts')
+        .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
+        .sortBy('createdAt', 'desc')
+        .fetch()
 
-    return { homepagePost, posts }
+      return { homepagePost, posts }
+    } catch (error) {
+      $sentry.captureException(error)
+    }
   },
 }
 </script>

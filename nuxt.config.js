@@ -87,6 +87,8 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    // https://sentry.nuxtjs.org/
+    '@nuxtjs/sentry',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://cloudinary.nuxtjs.org/
@@ -97,7 +99,29 @@ export default {
     '@nuxtjs/svg',
   ],
 
-  // PWA module configuration(https://pwa.nuxtjs.org/)
+  // Sentry module configuration https://sentry.nuxtjs.org/sentry/options
+  sentry: {
+    dsn: process.env.SENTRY_DSN,
+    config: {
+      config: {
+        environment: process.env.ENVIRONMENT,
+      },
+      tracing: {
+        tracesSampleRate: 0.5,
+        vueOptions: {
+          tracing: true,
+          tracingOptions: {
+            hooks: ['mount', 'update'],
+            timeout: 2000,
+            trackComponents: true,
+          },
+        },
+        browserOptions: {},
+      },
+    },
+  },
+
+  // PWA module configuration (https://pwa.nuxtjs.org/)
   pwa: {
     meta: {
       theme_color: '#ba7cf0',
