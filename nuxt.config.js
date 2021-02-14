@@ -102,7 +102,20 @@ export default {
   // Sentry module configuration https://sentry.nuxtjs.org/sentry/options
   sentry: {
     dsn: process.env.SENTRY_DSN,
-    config: {}, // Additional config
+    config: {
+      tracing: {
+        tracesSampleRate: 0.5,
+        vueOptions: {
+          tracing: true,
+          tracingOptions: {
+            hooks: ['mount', 'update'],
+            timeout: 2000,
+            trackComponents: true,
+          },
+        },
+        browserOptions: {},
+      },
+    },
   },
 
   // PWA module configuration (https://pwa.nuxtjs.org/)
