@@ -7,6 +7,7 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 env:
+  ENVIRONMENT: 'production'
   CLOUDINARY_CLOUD: '${{ secrets.CLOUDINARY_CLOUD }}'
   CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
   CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
