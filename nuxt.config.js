@@ -101,6 +101,13 @@ export default {
       short_name: 'm-gogo',
       background_color: '#160166',
     },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://res.cloudinary.com/m-gogo/.*',
+        },
+      ],
+    },
   },
 
   // Cloudinary module configuration (https://cloudinary.nuxtjs.org/options/)
