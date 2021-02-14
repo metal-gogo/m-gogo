@@ -45,6 +45,15 @@ export default {
           'https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap',
       },
     ],
+    script: [
+      {
+        // Analytics with plausible (https://plausible.io/)
+        src: 'https://plausible.io/js/plausible.js',
+        'data-domain': 'mgogo.dev',
+        async: true,
+        defer: true,
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
