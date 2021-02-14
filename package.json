@@ -1,10 +1,10 @@
 {
   "name": "m-gogo",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "author": {
-    "name" : "Daniel González",
-    "email" : "d.g.g69@me.com",
-    "url" : "https://mgogo.dev"
+    "name": "Daniel González",
+    "email": "d.g.g69@me.com",
+    "url": "https://mgogo.dev"
   },
   "description": "Blog about anything that pops into my mind. Probably you will find some tech content here since I'm a Software Engineer.",
   "private": true,
