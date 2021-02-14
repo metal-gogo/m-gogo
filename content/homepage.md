@@ -1,4 +1,4 @@
-Hi, I'm metal-gogo! Welcome to my blog 🤓.
+Hi, I'm Dani, mgogo, m-gogo, or metal-gogo! Welcome to my blog 🤓.
 
 I will blog about anything that pops into my mind. Probably you will find some tech content in here since I'm a Software Engineer. I will also write about the things I like, and the events I find interesting.
 
