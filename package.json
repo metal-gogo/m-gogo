@@ -1,6 +1,6 @@
 {
   "name": "m-gogo",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": {
     "name": "Daniel González",
     "email": "d.g.g69@me.com",
@@ -28,6 +28,8 @@
     "@nuxt/content": "^1.13.1",
     "@nuxtjs/cloudinary": "^1.0.3-beta-3",
     "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/sentry": "^5.0.1",
+    "@sentry/tracing": "^6.1.0",
     "core-js": "^3.6.5",
     "glob": "^7.1.6",
     "nuxt": "^2.14.6",

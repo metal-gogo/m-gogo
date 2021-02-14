@@ -10,10 +10,14 @@
 <script>
 export default {
   name: 'PostPage',
-  async asyncData({ $content, params }) {
-    const post = await $content('posts', params.slug).fetch()
+  async asyncData({ $content, params, $sentry }) {
+    try {
+      const post = await $content('posts', params.slug).fetch()
 
-    return { post }
+      return { post }
+    } catch (error) {
+      $sentry.captureException(error)
+    }
   },
   head() {
     const { title, description, featuredImageUrl } = this.post
