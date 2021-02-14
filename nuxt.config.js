@@ -88,12 +88,25 @@ export default {
     '@nuxtjs/svg',
   ],
 
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-xonokai.css',
-      },
+  // PWA module configuration(https://pwa.nuxtjs.org/)
+  pwa: {
+    meta: {
+      theme_color: '#ba7cf0',
+      title: 'm-gogo | Blog about my random thoughts',
+      ogHost: 'https://mgogo.dev',
+      'twitter:creator': '@metal_gogo',
+    },
+    manifest: {
+      name: 'm-gogo | Blog about my random thoughts',
+      short_name: 'm-gogo',
+      background_color: '#160166',
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: 'https://res.cloudinary.com/m-gogo/.*',
+        },
+      ],
     },
   },
 
@@ -103,6 +116,15 @@ export default {
     apiKey: process.env.CLOUDINARY_API_KEY,
     apiSecret: process.env.CLOUDINARY_API_SECRET,
     useComponent: true,
+  },
+
+  // Content module configuration (https://go.nuxtjs.dev/config-content)
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-xonokai.css',
+      },
+    },
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
