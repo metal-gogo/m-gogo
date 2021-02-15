@@ -106,18 +106,7 @@ export default {
       config: {
         environment: process.env.ENVIRONMENT,
       },
-      tracing: {
-        tracesSampleRate: 0.5,
-        vueOptions: {
-          tracing: true,
-          tracingOptions: {
-            hooks: ['mount', 'update'],
-            timeout: 2000,
-            trackComponents: true,
-          },
-        },
-        browserOptions: {},
-      },
+      tracing: true,
     },
   },
 
