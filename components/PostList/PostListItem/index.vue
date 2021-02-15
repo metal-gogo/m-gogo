@@ -14,8 +14,8 @@
         >
           <template #transformations>
             <cld-transformation
-              width="728"
-              height="728"
+              width="972"
+              height="972"
               crop="pad"
               background="black"
             />
