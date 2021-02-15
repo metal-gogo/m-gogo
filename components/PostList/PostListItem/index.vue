@@ -23,6 +23,11 @@
               crop="pad"
               background="black"
             />
+            <cld-transformation
+              fetch-format="auto"
+              quality="auto"
+              loading="lazy"
+            />
             <cld-transformation gravity="north" />
           </template>
         </post-image>
