@@ -1,5 +1,5 @@
-name: "test"
-on: # rebuild any PRs and main branch changes
+name: "Create Sentry release"
+on:
   push:
     branches:
       - main
