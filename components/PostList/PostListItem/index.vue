@@ -1,6 +1,10 @@
 <template>
   <li class="post-list-item">
-    <nuxt-link :to="postSlug" class="post-list-item__link">
+    <nuxt-link
+      :to="postSlug"
+      class="post-list-item__link"
+      :aria-labelledby="postTitleId"
+    >
       <div class="post-list-item__image-container">
         <post-image
           :src="featuredImage"
@@ -24,7 +28,9 @@
         </post-image>
       </div>
       <article class="post-list-item__article">
-        <h3 class="post-list-item__title">{{ title }}</h3>
+        <h3 :id="postTitleId" class="post-list-item__title">
+          {{ title }}
+        </h3>
         <p class="post-list-item__summary">{{ summary }}</p>
       </article>
     </nuxt-link>
@@ -55,6 +61,9 @@ export default {
   computed: {
     postSlug() {
       return `posts/${this.slug}`
+    },
+    postTitleId() {
+      return `title_${this.slug}`
     },
   },
 }
