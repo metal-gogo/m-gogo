@@ -28,23 +28,7 @@ export default {
         content: 'DPR, Viewport-Width, Width',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
       {
         // Analytics with plausible (https://plausible.io/)
@@ -91,6 +75,8 @@ export default {
     '@nuxtjs/sentry',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
     // https://cloudinary.nuxtjs.org/
     '@nuxtjs/cloudinary',
     // https://go.nuxtjs.dev/content
@@ -130,6 +116,20 @@ export default {
         },
       ],
     },
+  },
+
+  // Google Fonts module configuration (https://google-fonts.nuxtjs.org/options)
+  googleFonts: {
+    families: {
+      'Crimson+Pro': {
+        wght: [400, 700],
+        ital: [400, 700],
+      },
+      'Yanone+Kaffeesatz': {
+        wght: [700],
+      },
+    },
+    display: 'swap',
   },
 
   // Cloudinary module configuration (https://cloudinary.nuxtjs.org/options/)
