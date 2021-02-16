@@ -10,7 +10,7 @@
       "source": "^/_nuxt/**/*.*",
       "headers": [ {
         "key": "Cache-Control",
-        "value": "max-age=31536000, stale-while-revalidate"
+        "value": "max-age=31536000"
       } ]
     } ]
   }
