@@ -1,8 +1,8 @@
 <template>
   <div>
     <main class="container">
-      <h1 class="title">M-GoGo blog</h1>
-      <article-content :post="homepagePost" />
+      <h1 class="title">About me</h1>
+      <article-content :post="aboutMePost" />
     </main>
     <aside class="container">
       <post-list list-title="Latest posts" :posts="posts" />
@@ -11,16 +11,24 @@
 </template>
 
 <script>
+import composeHead from '@/utils/pages/composeHead'
+
 export default {
-  name: 'IndexPage',
+  name: 'AboutMePage',
   async asyncData({ $content, params, $sentry }) {
-    const homepagePost = await $content('/', 'index').fetch()
+    const aboutMePost = await $content('/', 'about-me').fetch()
+
     const posts = await $content('posts')
       .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
 
-    return { homepagePost, posts }
+    return { aboutMePost, posts }
+  },
+  head() {
+    const { title, summary, featuredImageUrl } = this.aboutMePost
+
+    return composeHead({ title, description: summary, featuredImageUrl })
   },
 }
 </script>
