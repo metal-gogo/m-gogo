@@ -5,7 +5,7 @@
       <brand-icon
         class="the-footer__heart-icon"
         :name="heart"
-        title="heart icon"
+        title="Heart icon"
       />
       <span>from Mexico</span>
     </div>
