@@ -6,4 +6,4 @@ featuredImage: static/images/posts/top-5-football-games-i-saw-with-my-dad/helmet
 
 Wait for it
 
-<post-image src="/images/posts/top-5-football-games-i-saw-with-my-dad/helmet_catch" alt="Derek Tyree is catching the football with help of his helmet in tight coverage" title="The helmet catch ny Derek Tyree" width="792" height="512"></post-image>
+<post-image src="/images/posts/top-5-football-games-i-saw-with-my-dad/helmet_catch" alt="David Tyree is catching the football with help of his helmet in tight coverage" title="The helmet catch by David Tyree" width="792" height="512"></post-image>
