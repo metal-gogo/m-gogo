@@ -10,6 +10,7 @@ const globalComponents = [
   'components/PostList/PostListItem',
   'components/SurroundingPosts',
   'components/global/PostImage',
+  'components/global/PostVideo',
 ]
 
 export default globalComponents

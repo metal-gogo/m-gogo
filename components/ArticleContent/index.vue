@@ -30,7 +30,8 @@ export default {
     border: 0;
   }
 
-  .post-image {
+  .post-image,
+  .post-video {
     align-items: center;
     padding: 0 1rem;
     margin: 0 0 1rem;
@@ -40,7 +41,8 @@ export default {
     }
   }
 
-  .post-image__image-container {
+  .post-image__image-container,
+  .post-video__video-container {
     border: 2px solid var(--accent);
     border-radius: 6px;
   }
