@@ -71,8 +71,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://sentry.nuxtjs.org/
-    '@nuxtjs/sentry',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://google-fonts.nuxtjs.org/
@@ -84,17 +82,6 @@ export default {
     // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
   ],
-
-  // Sentry module configuration https://sentry.nuxtjs.org/sentry/options
-  sentry: {
-    dsn: process.env.SENTRY_DSN,
-    config: {
-      config: {
-        environment: process.env.ENVIRONMENT,
-      },
-      tracing: true,
-    },
-  },
 
   // PWA module configuration (https://pwa.nuxtjs.org/)
   pwa: {
