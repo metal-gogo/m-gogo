@@ -1,6 +1,7 @@
 import {
   getContentRoutes,
   insertFeaturedImageToPost,
+  oneYearInSeconds,
   uploadImagesToCloudinary,
 } from './utils/config'
 
@@ -56,8 +57,6 @@ export default {
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-
-  serverMiddleware: ['~/server-middleware/headers'],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -158,7 +157,7 @@ export default {
     'content:file:beforeInsert': async (document) => {
       await insertFeaturedImageToPost(document)
     },
-    'build:before': async () => {
+    'build:before': async (nuxt) => {
       await uploadImagesToCloudinary()
     },
   },
