@@ -44,6 +44,7 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   grid-gap: 2.5rem 1rem;
   max-width: 100%;
+  padding: 1rem 0;
   margin: 0;
   list-style: none;
 }
