@@ -55,14 +55,6 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
-  render: {
-    // Setting up cache for 'static' directory - a year in milliseconds
-    // https://web.dev/uses-long-cache-ttl
-    static: {
-      maxAge: oneYearInSeconds,
-    },
-  },
-
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
