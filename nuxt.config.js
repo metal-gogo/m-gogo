@@ -1,7 +1,6 @@
 import {
   getContentRoutes,
   insertFeaturedImageToPost,
-  oneYearInSeconds,
   uploadImagesToCloudinary,
 } from './utils/config'
 
