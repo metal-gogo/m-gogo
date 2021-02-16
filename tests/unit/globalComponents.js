@@ -6,6 +6,9 @@ const globalComponents = [
   'components/TheFooter/TheFooterAcknowledgments',
   'components/TheHeader',
   'components/TheLogo',
+  'components/PostList',
+  'components/PostList/PostListItem',
+  'components/SurroundingPosts',
   'components/global/PostImage',
 ]
 
