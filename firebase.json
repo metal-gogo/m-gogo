@@ -7,7 +7,7 @@
       "**/node_modules/**"
     ],
     "headers": [ {
-      "source": "^_nuxt/**/*.*",
+      "source": "^/_nuxt/**/*.*",
       "headers": [ {
         "key": "Cache-Control",
         "value": "max-age=31536000, stale-while-revalidate"
