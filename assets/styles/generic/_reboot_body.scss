@@ -25,5 +25,7 @@
     background-color: var(--bg-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    // transitions to give a better look to the change of light/dark modes
+    transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
   }
 }
