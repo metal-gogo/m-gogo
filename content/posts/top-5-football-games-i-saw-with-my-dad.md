@@ -105,8 +105,6 @@ The Cardinals rallied back of Kurt Warner, Larry Fitzgerald, and Anquan Boldin t
 
 <post-image src="/images/posts/top-5-football-games-i-saw-with-my-dad/santonio_holmes_touchdown.gif" alt="Santonio Holmes catching the football on the endzone to seal the Super Bowl victory" title="The 'Tampa Toe-Tap' play by Santonio Holmes" width="792" height="512"></post-image>
 
-The Cardinals rallied back of Kurt Warner, Larry Fitzgerald, and Anquan Boldin to erase a 20-7 fourth-quarter deficit to lead the Steelers 23-20 with just over two minutes left in the game. An MVP-caliber game-winning drive by Ben Roethlisberger and Santonio Holmes sealed the game with a toe-tap catch on a triple coverage on the end of the endzone.
-
 Another unforgettable play was the 100-yard pick-six by James Harrison. An eternal 18 seconds long play, where Harrison intercepted Kurt Warner on the Steelers' goal line, then run all the field to barely cross the Cardinals' endzone while the last second of the quarter ran off. 
 
 I also remember Larry Fitzgerald catching two breath-taking touchdowns late in the fourth quarter to give the Cardinals a late lead. You can see all these plays repeatedly on all NFL seasons as they present the best plays in Super Bowl history.
