@@ -81,6 +81,8 @@ export default {
     '@nuxt/content',
     // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    // https://sitemap.nuxtjs.org/ The sitemap module must be the last module on the array
+    '@nuxtjs/sitemap',
   ],
 
   // PWA module configuration (https://pwa.nuxtjs.org/)
@@ -134,6 +136,12 @@ export default {
         theme: 'prism-themes/themes/prism-xonokai.css',
       },
     },
+  },
+
+  // Sitemap module configuration (https://sitemap.nuxtjs.org/usage/sitemap-options)
+  sitemap: {
+    hostname: 'https://mgogo.dev',
+    gzip: true,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
