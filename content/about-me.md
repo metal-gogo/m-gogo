@@ -64,8 +64,8 @@ Let's connect on [Twitter][metal-gogo:twitter], [Github][metal-gogo:github], and
 [kokonut-studio]: https://kokonutstudio.com/
 [hidrosina]: https://web.hidrosina.com.mx/
 [infomedia]: https://www.infomedia.com.mx/
-[america-movil]: https://www.americamovil.com/English/overview/default.aspx
+[america-movil]: https://www.americamovil.com/English/overview/default.aspx/
 [g21-comunicacion]: https://g21.com.mx/
-[metal-gogo:twitter]: https://twitter.com/metal_gogo
+[metal-gogo:twitter]: https://twitter.com/metal_gogo/
 [metal-gogo:github]: https://github.com/metal-gogo/
 [metal-gogo:linkedin]: https://www.linkedin.com/in/danielgonzalezg/?locale=en_US

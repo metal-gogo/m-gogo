@@ -11,4 +11,4 @@ Let's connect on [Twitter][metal-gogo:twitter], [Github][metal-gogo:github], and
 [metal-gogo:twitter]: https://twitter.com/metal_gogo
 [metal-gogo:github]: https://github.com/metal-gogo/
 [metal-gogo:linkedin]: https://www.linkedin.com/in/danielgonzalezg/?locale=en_US
-[about-me]: /about-me
+[about-me]: /about-me/
