@@ -1,6 +1,6 @@
 ---
 title: This Blog tech stack
-summary: A brief overview of the tools that I am using on this blog
+summary: A brief overview of the tools that I am using on this blog.
 featuredImage: static/images/posts/this-blog-tech-stack/nuxt.png
 ---
 
@@ -25,8 +25,8 @@ There are several moving pieces on this blog, and it could change in the future.
 
 [git]: https://git-scm.com/
 [github]: https://github.com/
-[github:actions]: https://github.com/features/actions
-[firebase:hosting]: https://firebase.google.com/docs/hosting
+[github:actions]: https://github.com/features/actions/
+[firebase:hosting]: https://firebase.google.com/docs/hosting/
 [vuejs]: https://vuejs.org/
 [nuxtjs]: https://nuxtjs.org/
 [nuxtjs:content]: https://content.nuxtjs.org/

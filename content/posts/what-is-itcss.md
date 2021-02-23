@@ -1,6 +1,6 @@
 ---
 title: What is ITCSS?
-summary: In-depth explanation on how does ITCSS provides a sane and scalable architecture for CSS
+summary: In-depth explanation on how does ITCSS provides a sane and scalable architecture for CSS.
 featuredImage: static/images/posts/what-is-itcss/ITCSS.jpg
 ---
 
@@ -220,17 +220,17 @@ ITCSS layer for utilities and helper classes with the ability to override anythi
 
 <!-- Links reference -->
 
-[csswizardry]: https://twitter.com/csswizardry
-[specificity]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+[csswizardry]: https://twitter.com/csswizardry/
+[specificity]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity/
 [estelle-weyl]: http://www.standardista.com/
 [estelle-weyl:specificity]: http://www.standardista.com/css3/css-specificity/
-[css]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS/
 [less]: http://lesscss.org/
 [scss]: https://sass-lang.com/
 [stylus]: https://stylus-lang.com/
 [bem]: http://getbem.com/
 [smacss]: http://smacss.com/
-[oocss]: https://www.keycdn.com/blog/oocss
+[oocss]: https://www.keycdn.com/blog/oocss/
 [react]: https://reactjs.org/
 [vue]: https://vuejs.org/
 [angular]: https://angular.io/
