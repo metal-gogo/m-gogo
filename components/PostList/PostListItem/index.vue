@@ -65,7 +65,7 @@ export default {
   },
   computed: {
     postSlug() {
-      return `posts/${this.slug}/`
+      return `posts/${this.slug}`
     },
     postTitleId() {
       return `title_${this.slug}`
