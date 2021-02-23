@@ -113,6 +113,6 @@ It was such an astonishing game that feels like a Hollywood script. I think it c
 
 <!-- Links reference -->
 
-[bayern_munich:2020]: https://en.wikipedia.org/wiki/FC_Barcelona_2%E2%80%938_FC_Bayern_Munich
-[ac_milan:2004]: https://en.wikipedia.org/wiki/2004%E2%80%9305_A.C._Milan_season
+[bayern_munich:2020]: https://en.wikipedia.org/wiki/FC_Barcelona_2%E2%80%938_FC_Bayern_Munich/
+[ac_milan:2004]: https://en.wikipedia.org/wiki/2004%E2%80%9305_A.C._Milan_season/
 [spain:2010]: https://www.fifa.com/worldcup/archive/southafrica2010/teams/team/43969/
