@@ -4,11 +4,6 @@
       <h1 class="title">About me</h1>
       <article-content :post="aboutMePost" />
     </main>
-    <hr />
-    <div>
-      {{ JSON.stringify(posts) }}
-    </div>
-    <hr />
     <aside v-if="posts" class="container">
       <post-list list-title="Latest posts" :posts="posts" />
     </aside>
