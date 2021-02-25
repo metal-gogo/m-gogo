@@ -1,5 +1,5 @@
 <template>
-  <section class="post-list">
+  <section v-if="hasPosts" class="post-list">
     <h2 v-if="listTitle.length" class="post-list-title">
       {{ listTitle }}
     </h2>
@@ -28,6 +28,11 @@ export default {
       type: String,
       required: false,
       default: '',
+    },
+  },
+  computed: {
+    hasPosts() {
+      return this.posts?.length > 0
     },
   },
 }

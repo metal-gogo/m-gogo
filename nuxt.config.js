@@ -53,7 +53,7 @@ export default {
 
   // Router configuration (https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router)
   router: {
-    trailingSlash: true,
+    trailingSlash: false,
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -147,7 +147,7 @@ export default {
   sitemap: {
     hostname: 'https://mgogo.dev',
     gzip: true,
-    trailingSlash: true,
+    trailingSlash: false,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

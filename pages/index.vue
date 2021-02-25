@@ -4,7 +4,7 @@
       <h1 class="title">M-GoGo blog</h1>
       <article-content :post="homepagePost" />
     </main>
-    <aside class="container">
+    <aside v-if="posts" class="container">
       <post-list list-title="Latest posts" :posts="posts" />
     </aside>
   </div>
