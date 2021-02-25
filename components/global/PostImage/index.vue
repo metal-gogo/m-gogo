@@ -24,7 +24,7 @@
         </slot>
       </cld-image>
     </client-only>
-    <figcaption v-if="title.length > 0" class="post-image__figcaption">
+    <figcaption v-if="hasTitle" class="post-image__figcaption">
       {{ title }}
     </figcaption>
   </figure>
@@ -57,6 +57,11 @@ export default {
     width: {
       type: Number,
       required: true,
+    },
+  },
+  computed: {
+    hasTitle() {
+      return this.title?.length > 0
     },
   },
 }
