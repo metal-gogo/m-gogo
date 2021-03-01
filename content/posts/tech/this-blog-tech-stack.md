@@ -1,7 +1,8 @@
 ---
 title: This Blog tech stack
 summary: A brief overview of the tools that I am using on this blog.
-featuredImage: static/images/posts/this-blog-tech-stack/nuxt.png
+featuredImage: static/images/posts/tech/this-blog-tech-stack/nuxt.png
+category: tech
 ---
 
 There are several moving pieces on this blog, and it could change in the future. However, these are the tools I'm using:

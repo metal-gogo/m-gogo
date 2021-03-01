@@ -40,7 +40,7 @@ const composeHead = ({
   }
 
   return {
-    title: `m-gogo | ${title}`,
+    title: `${title} | m-gogo`,
     meta,
   }
 }

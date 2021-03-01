@@ -1,7 +1,7 @@
 <template>
   <li class="post-list-item">
     <nuxt-link
-      :to="postSlug"
+      :to="path"
       class="post-list-item__link"
       :aria-labelledby="postTitleId"
     >
@@ -50,7 +50,7 @@ export default {
       type: String,
       required: true,
     },
-    slug: {
+    path: {
       type: String,
       required: true,
     },
@@ -64,9 +64,6 @@ export default {
     },
   },
   computed: {
-    postSlug() {
-      return `posts/${this.slug}`
-    },
     postTitleId() {
       return `title_${this.slug}`
     },

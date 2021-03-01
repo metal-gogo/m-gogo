@@ -1,7 +1,8 @@
 ---
 title: Top 5 football games 🏈 I saw with my dad
 summary: My dad instilled in me a great love for football. These are the games I enjoyed most by his side.
-featuredImage: static/images/posts/top-5-football-games-i-saw-with-my-dad/helmet_catch.jpg
+featuredImage: static/images/posts/lists/top-5-football-games-i-saw-with-my-dad/helmet_catch.jpg
+category: lists
 ---
 
 <!-- omit in toc -->
@@ -75,7 +76,7 @@ The game was tight throughout, with both teams' defense dominating the competiti
 
 In the drive's most memorable play, David Tyree made the **Helmet Catch** on 3rd down, a leaping one-handed catch pinning the football with his right hand to the crown of his helmet for a 32-yard first down conversion.
 
-<post-image src="/images/posts/top-5-football-games-i-saw-with-my-dad/helmet_catch" alt="David Tyree is catching the football with help of his helmet in tight coverage" title="The helmet catch by David Tyree" width="792" height="512"></post-image>
+<post-image src="/images/posts/lists/top-5-football-games-i-saw-with-my-dad/helmet_catch" alt="David Tyree is catching the football with help of his helmet in tight coverage" title="The helmet catch by David Tyree" width="792" height="512"></post-image>
 
 I remember years later talking to my dad after he watched a rerun of this Super Bowl. He mentioned that the Giants were so close to losing the game on so many different plays that it was just unbelievable that they outlasted the Patriots. I can't believe this is not the number one, 😹.
 
@@ -103,7 +104,7 @@ As a side note, I remember that my best friend traveled to New York and had the 
 
 The Cardinals rallied back of Kurt Warner, Larry Fitzgerald, and Anquan Boldin to erase a 20-7 fourth-quarter deficit to lead the Steelers 23-20 with just over two minutes left in the game. An MVP-caliber game-winning drive by Ben Roethlisberger and Santonio Holmes sealed the game with a toe-tap catch on a triple coverage on the end of the endzone.
 
-<post-image src="/images/posts/top-5-football-games-i-saw-with-my-dad/santonio_holmes_touchdown.gif" alt="Santonio Holmes catching the football on the endzone to seal the Super Bowl victory" title="The 'Tampa Toe-Tap' play by Santonio Holmes" width="792" height="512"></post-image>
+<post-image src="/images/posts/lists/top-5-football-games-i-saw-with-my-dad/santonio_holmes_touchdown.gif" alt="Santonio Holmes catching the football on the endzone to seal the Super Bowl victory" title="The 'Tampa Toe-Tap' play by Santonio Holmes" width="792" height="512"></post-image>
 
 Another unforgettable play was the 100-yard pick-six by James Harrison. An eternal 18 seconds long play, where Harrison intercepted Kurt Warner on the Steelers' goal line, then run all the field to barely cross the Cardinals' endzone while the last second of the quarter ran off. 
 

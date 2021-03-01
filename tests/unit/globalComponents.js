@@ -8,7 +8,6 @@ const globalComponents = [
   'components/TheLogo',
   'components/PostList',
   'components/PostList/PostListItem',
-  'components/SurroundingPosts',
   'components/global/PostImage',
   'components/global/PostVideo',
 ]

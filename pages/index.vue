@@ -11,12 +11,18 @@
 </template>
 
 <script>
+import availableCategories from '@/utils/dictionary/categoriesDictionary/availableCategories'
+
 export default {
   name: 'IndexPage',
   async asyncData({ $content, params, $sentry }) {
-    const homepagePost = await $content('/', 'index').fetch()
-    const posts = await $content('posts')
-      .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
+    const homepagePost = await $content('index').fetch()
+    const posts = await $content('posts', { deep: true })
+      .where({
+        slug: { $nin: availableCategories },
+        isDraft: { $ne: true },
+      })
+      .only(['title', 'path', 'summary', 'featuredImage', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
 
