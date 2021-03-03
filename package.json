@@ -31,7 +31,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
     "glob": "^7.1.6",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.2",
     "prism-themes": "^1.5.0",
     "ramda": "^0.27.1"
   },
