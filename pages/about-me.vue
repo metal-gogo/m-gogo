@@ -26,9 +26,9 @@ export default {
     return { aboutMePost, posts }
   },
   head() {
-    const { title, summary, featuredImageUrl } = this.aboutMePost
+    const { summary, featuredImageUrl } = this.aboutMePost
 
-    return composeHead({ title, description: summary, featuredImageUrl })
+    return composeHead({ title: 'asas', description: summary, featuredImageUrl })
   },
 }
 </script>
