@@ -20,7 +20,7 @@ export default {
 
     const posts = await $content('posts')
       .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('createdAt', 'asc')
       .fetch()
 
     return { aboutMePost, posts }
