@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import availableCategories from '@/utils/dictionary/categoriesDictionary/availableCategories'
 import composeHead from '@/utils/pages/composeHead'
 
 export default {
@@ -19,6 +20,10 @@ export default {
     const aboutMePost = await $content('/', 'about-me').fetch()
 
     const posts = await $content('posts')
+      .where({
+        slug: { $nin: availableCategories },
+        isDraft: { $ne: true },
+      })
       .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
@@ -26,9 +31,9 @@ export default {
     return { aboutMePost, posts }
   },
   head() {
-    const { summary, featuredImageUrl } = this.aboutMePost
+    const { title, summary, featuredImageUrl } = this.aboutMePost
 
-    return composeHead({ title: 'asas', description: summary, featuredImageUrl })
+    return composeHead({ title, description: summary, featuredImageUrl })
   },
 }
 </script>

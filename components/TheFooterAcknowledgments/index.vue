@@ -23,13 +23,22 @@
 </template>
 
 <script>
-import acknowledgments from './acknowledgments'
-
 export default {
   name: 'TheFooterAcknowledgments',
   data() {
     return {
-      acknowledgments,
+      acknowledgments: [
+        {
+          element: 'Built with',
+          company: 'NuxtJS',
+          link: 'https://nuxtjs.org/',
+        },
+        {
+          element: 'Icons by',
+          company: 'Orion Icon Library',
+          link: 'https://orioniconlibrary.com',
+        },
+      ],
     }
   },
 }
