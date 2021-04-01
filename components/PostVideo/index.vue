@@ -1,6 +1,5 @@
 <template>
   <figure class="post-video">
-    <!-- <client-only placeholder="Loading image..."> </client-only> -->
     <iframe
       class="post-video__video-container"
       frameborder="0"

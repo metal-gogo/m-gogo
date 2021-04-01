@@ -8,7 +8,7 @@
         v-for="(post, index) in posts"
         :key="index"
         :featured-image="post.featuredImage"
-        :slug="post.slug"
+        :path="post.path"
         :summary="post.summary"
         :title="post.title"
       />

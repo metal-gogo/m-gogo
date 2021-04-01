@@ -1,22 +1,12 @@
+import availableCategories from '@/utils/dictionary/categoriesDictionary/availableCategories'
+
+const categoryIcons = availableCategories.map(
+  (category) => `categories/${category}`
+)
+
 const availableIcons = [
   'brand/logo',
-  'categories/bookReviews',
-  'categories/food',
-  'categories/fuckUps',
-  'categories/games',
-  'categories/health',
-  'categories/learnings',
-  'categories/lists',
-  'categories/mentalHealth',
-  'categories/money',
-  'categories/movies',
-  'categories/music',
-  'categories/personalThoughts',
-  'categories/restaurants',
-  'categories/sports',
-  'categories/tech',
-  'categories/travels',
-  'categories/trending',
+  ...categoryIcons,
   'social/facebook',
   'social/github',
   'social/instagram',

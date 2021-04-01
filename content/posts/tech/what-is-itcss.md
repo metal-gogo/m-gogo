@@ -1,7 +1,8 @@
 ---
 title: What is ITCSS?
 summary: In-depth explanation on how does ITCSS provides a sane and scalable architecture for CSS.
-featuredImage: static/images/posts/what-is-itcss/ITCSS.jpg
+featuredImage: static/images/posts/tech/what-is-itcss/ITCSS.jpg
+category: tech
 ---
 
 **ITCSS** refers to Inverted Triangle CSS, a term introduced by [Harry Roberts (@csswizardry)][csswizardry], to deal with the increasing complexity of managing projects with CSS. This methodology helps you organize your CSS projects in a sane and scalable manner. In this blog post I'll try to explain the magnificence of this beautiful architecture.
@@ -99,7 +100,7 @@ The following list of selector types increases by **specificity**:
 
 Take a look at this amazing image created by [Estelle Weyl][estelle-weyl] on her [post on specificity][estelle-weyl:specificity] for a visual representation of **specificity**.
 
-<post-image src="/images/posts/what-is-itcss/css_specifishity" alt="Image describing different specificity selectors with plankton, fish, and sharks" title="CSS specificity explained with plankton, fish, and sharks." width="1184" height="1326"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/css_specifishity" alt="Image describing different specificity selectors with plankton, fish, and sharks" title="CSS specificity explained with plankton, fish, and sharks." width="1184" height="1326"></post-image>
 
 ---
 
@@ -127,7 +128,7 @@ h1 {
 
 The result would be:
 
-<post-image src="/images/posts/what-is-itcss/css_cascade_example" alt="The result of the cascade, applying the last declared rule to h1 tags" title="Result of an example of the CSS cascade applying two styles to h1 tags." width="1262" height="235"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/css_cascade_example" alt="The result of the cascade, applying the last declared rule to h1 tags" title="Result of an example of the CSS cascade applying two styles to h1 tags." width="1262" height="235"></post-image>
 
 ---
 
@@ -145,11 +146,11 @@ is just a high-level and relatively crude model. It aims to give a
 comprehensive and general overview of the selectors' specificity across an
 entire project.
 
-<post-image src="/images/posts/what-is-itcss/better_specificity_graph" alt="A line graph depicting a gradual increment on specificity through the stylesheet" title="Example graph provided by Harry Roberts to showcase the ideal specificity graph." width="1504" height="998"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/better_specificity_graph" alt="A line graph depicting a gradual increment on specificity through the stylesheet" title="Example graph provided by Harry Roberts to showcase the ideal specificity graph." width="1504" height="998"></post-image>
 
 As you can see, the **specificity** should be growing towards the end of the graph. Additionally, you can take on that spikes are not great, however, in a real-life codebase you should see some spikes on the end; but that is perfectly fine since we will want to have some component-based **specificity** there.
 
-<post-image src="/images/posts/what-is-itcss/demo_specificity_graph" alt="A line graph without a big increment towards the end" title="The specificity graph of this website at the time of writing this article." width="1832" height="718"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/demo_specificity_graph" alt="A line graph without a big increment towards the end" title="The specificity graph of this website at the time of writing this article." width="1832" height="718"></post-image>
 
 You may notice that there is no real increment in the specificity on this website specificity graph. This is due to the early stage of the blog. So until now, I have not needed to add a lot of styling for specific components, therefore we don't see the expected spikes on the end of the graph. However, the approach using **ITCSS** provides a predictable graph on the website 🤓.
 
@@ -181,7 +182,7 @@ These guidelines are easier said than followed. To achieve this in a consistent 
 
 In **ITCSS**, each layer is a logical progression from the last. It increases in specificity, it gets more explicit and intentioned, and it narrows the reach of the selectors used. This means our CSS is inherently easier to scale, as we're writing it in an order that only ever adds to what was written previously. We don't waste time undoing or overriding overly opinionated CSS that was written earlier on.
 
-<post-image src="/images/posts/what-is-itcss/ITCSS" alt="A triangle facing down divided in 7, where every part of the triangle is one layer of the ITCSS architecture" title="ITCSS layers diagram." width="600" height="400"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/ITCSS" alt="A triangle facing down divided in 7, where every part of the triangle is one layer of the ITCSS architecture" title="ITCSS layers diagram." width="600" height="400"></post-image>
 
 It also means that everything, and every type of thing, has its own consistent, predictable place to live. This makes both finding and adding styles much simpler, which is particularly useful when you have several developers contributing to the codebase.
 
@@ -216,7 +217,7 @@ components. Therefore, I recommend keeping all component related CSS on its own 
 
 ITCSS layer for utilities and helper classes with the ability to override anything which goes before in the triangle, eg. hide helper class. This layer shouldn't be used unless something awful happens.
 
-<post-image src="/images/posts/what-is-itcss/ITCSS_reach_specificity_explicitness" alt="A triangle facing showing the relationship of reach, specificity, and explicitness on the ITCSS architecture" title="Reach, specificity, and explicitness diagram with ITCSS." width="247" height="204"></post-image>
+<post-image src="/images/posts/tech/what-is-itcss/ITCSS_reach_specificity_explicitness" alt="A triangle facing showing the relationship of reach, specificity, and explicitness on the ITCSS architecture" title="Reach, specificity, and explicitness diagram with ITCSS." width="247" height="204"></post-image>
 
 <!-- Links reference -->
 

@@ -3,14 +3,13 @@ const globalComponents = [
   'components/BrandIcon',
   'components/ColorModePicker',
   'components/TheFooter',
-  'components/TheFooter/TheFooterAcknowledgments',
+  'components/TheFooterAcknowledgments',
   'components/TheHeader',
   'components/TheLogo',
   'components/PostList',
-  'components/PostList/PostListItem',
-  'components/SurroundingPosts',
-  'components/global/PostImage',
-  'components/global/PostVideo',
+  'components/PostListItem',
+  'components/PostImage',
+  'components/PostVideo',
 ]
 
 export default globalComponents

@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import availableCategories from '@/utils/dictionary/categoriesDictionary/availableCategories'
 import composeHead from '@/utils/pages/composeHead'
 
 export default {
@@ -18,7 +19,11 @@ export default {
   async asyncData({ $content, params, $sentry }) {
     const aboutMePost = await $content('/', 'about-me').fetch()
 
-    const posts = await $content('posts')
+    const posts = await $content('posts', { deep: true })
+      .where({
+        slug: { $nin: availableCategories },
+        isDraft: { $ne: true },
+      })
       .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()

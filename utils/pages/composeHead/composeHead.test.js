@@ -8,7 +8,7 @@ describe('@/utils/pages/composeHead', () => {
   it('composes the head metadata with default values', () => {
     const composedHead = composeHead()
     const expectedHead = {
-      title: `m-gogo | ${defaultTitle}`,
+      title: `${defaultTitle} | m-gogo`,
       meta: [
         {
           hid: 'description',
