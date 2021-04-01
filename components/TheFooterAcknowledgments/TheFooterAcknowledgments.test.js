@@ -1,7 +1,8 @@
 import wrapperFactoryBuilder from '@/tests/unit/wrapperFactoryBuilder.js'
 
+import acknowledgments from '@/utils/acknowledgments'
+
 import TheFooterAcknowledgments from './index.vue'
-import acknowledgments from './acknowledgments'
 
 describe('@/components/TheFooter/TheFooterAcknowledgments', () => {
   const wrapperFactory = wrapperFactoryBuilder(TheFooterAcknowledgments)

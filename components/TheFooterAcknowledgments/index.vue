@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import acknowledgments from './acknowledgments'
+import acknowledgments from '@/utils/acknowledgments/index'
 
 export default {
   name: 'TheFooterAcknowledgments',

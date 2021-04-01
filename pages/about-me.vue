@@ -19,7 +19,7 @@ export default {
   async asyncData({ $content, params, $sentry }) {
     const aboutMePost = await $content('/', 'about-me').fetch()
 
-    const posts = await $content('posts')
+    const posts = await $content('posts', { deep: true })
       .where({
         slug: { $nin: availableCategories },
         isDraft: { $ne: true },
