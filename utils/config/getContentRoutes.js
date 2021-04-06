@@ -1,10 +1,9 @@
-import availableCategories from '../dictionary/categoriesDictionary/availableCategories'
+// import availableCategories from '../dictionary/categoriesDictionary/availableCategories'
 
 const getContentRoutes = async () => {
   const { $content } = require('@nuxt/content')
   const files = await $content({ deep: true })
     .where({
-      slug: { $nin: availableCategories },
       isDraft: { $ne: true },
     })
     .only(['path'])

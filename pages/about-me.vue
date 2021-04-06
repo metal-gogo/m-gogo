@@ -24,7 +24,7 @@ export default {
         slug: { $nin: availableCategories },
         isDraft: { $ne: true },
       })
-      .only(['title', 'slug', 'summary', 'featuredImage', 'createdAt'])
+      .only(['title', 'path', 'summary', 'featuredImage', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
 
