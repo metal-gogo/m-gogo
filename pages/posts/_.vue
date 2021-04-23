@@ -6,6 +6,9 @@
         <article-content :post="post" />
       </article>
     </main>
+    <!-- <aside class="container">
+      <category-list />
+    </aside> -->
     <aside v-if="categoryPosts" class="container">
       <post-list :list-title="categoryPostsTitle" :posts="categoryPosts" />
     </aside>
