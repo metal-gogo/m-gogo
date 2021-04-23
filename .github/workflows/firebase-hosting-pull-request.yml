@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo workflow created by ${{github.actor}
+      - run: echo workflow created by ${{ github.actor }}
       - run: npm ci
       - run: npm run generate
       - uses: FirebaseExtended/action-hosting-deploy@v0
