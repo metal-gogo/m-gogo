@@ -10,6 +10,7 @@ env:
   CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
 jobs:
   build_and_preview:
+    if: github.actor!= 'dependabot-preview[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
