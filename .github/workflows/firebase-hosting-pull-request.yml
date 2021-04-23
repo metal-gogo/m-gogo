@@ -9,11 +9,13 @@ env:
   CLOUDINARY_API_KEY: '${{ secrets.CLOUDINARY_API_KEY }}'
   CLOUDINARY_API_SECRET: '${{ secrets.CLOUDINARY_API_SECRET }}'
 jobs:
+
   build_and_preview:
-    if: github.actor!= 'dependabot-preview[bot]'
+    if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'dependabot-preview[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: echo workflow created by ${{ github.actor }}
       - run: npm ci
       - run: npm run generate
       - uses: FirebaseExtended/action-hosting-deploy@v0
