@@ -14,7 +14,7 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'dependabot-preview[bot]' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - run: echo workflow created by ${{ github.actor }}
       - run: npm ci
       - run: npm run generate
