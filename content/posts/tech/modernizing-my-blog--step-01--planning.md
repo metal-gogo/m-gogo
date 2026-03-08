@@ -83,30 +83,15 @@ Once I decided to bring the project back, I narrowed the migration strategy to t
 
 ### Option A — Stabilize first, then migrate
 
-The first option was to clean up the existing Nuxt 2 codebase before touching the framework at all.
-
-That means things like:
-
-- removing dead code,
-- fixing small bugs,
-- getting CI into a trustworthy state,
-- trimming dependencies that no longer earn their keep.
-
-This does not modernize the stack on its own, but it makes the migration easier to reason about. It keeps cleanup problems from getting mixed into framework problems.
+Clean up the existing Nuxt 2 codebase before touching the framework: remove dead code, fix small bugs, get CI into a trustworthy state, trim dependencies that no longer earn their keep. This keeps cleanup problems from getting mixed into framework problems.
 
 ### Option B — Use Nuxt Bridge as an intermediate step
 
-The second option was Nuxt Bridge.
-
-This is the standard cautious answer for a lot of Nuxt 2 apps. It lets you adopt some newer patterns while staying in the Nuxt 2 world long enough to reduce migration shock.
-
-That makes a lot of sense for bigger codebases with Vuex, plugins, middleware, custom webpack behavior, and enough framework-specific complexity that a direct jump would be risky.
+Nuxt Bridge is the standard cautious path for Nuxt 2 apps with real framework complexity — Vuex, custom plugins, middleware, custom webpack behavior. It buys time before a full migration.
 
 ### Option C — Migrate directly to a modern stack
 
-The third option was to skip the intermediate layer and move directly to the modern stack.
-
-That only makes sense if the app is small enough, simple enough, and legible enough that I can see the actual migration surface without pretending there is less risk than there is.
+Skip the intermediate layer and move directly to the modern stack. Only viable if the app is small and legible enough to see the full migration surface clearly.
 
 > **Image note:** A 3-path decision diagram would fit nicely here.  
 > Suggested concept: three branches labeled `Stabilize first`, `Nuxt Bridge`, and `Direct migration`, with the chosen path highlighted.  
@@ -133,11 +118,7 @@ The sequencing I landed on looks like this:
 3. move module and feature migrations after the core framework move,
 4. leave TypeScript and experimental tooling until after the first modern release.
 
-That is not the flashiest approach, but it is the one I trust.
-
-## Why I’m targeting Nuxt 4
-
-I am targeting Nuxt 4, not Nuxt 3.
+### Why Nuxt 4, not Nuxt 3
 
 My reasoning is simple: if I already have to rewrite config, update routing conventions, revisit file layout, and replace old module assumptions, I do not see much value in stopping one major behind.
 
@@ -361,11 +342,7 @@ It is how I keep agent-generated work reviewable, reversible, and understandable
 
 ## What success looks like
 
-For me, success is not “the project is modern now.”
-
-That is too vague, and honestly a little self-congratulatory.
-
-Success is more concrete than that:
+Success means:
 
 - the blog runs on **Nuxt 4 / Vue 3 / Node 20+**
 - the content renders the same way it did before
