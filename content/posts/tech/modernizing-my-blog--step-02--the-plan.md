@@ -6,6 +6,37 @@ category: "tech"
 isDraft: true
 ---
 
+<!-- omit in toc -->
+## Content 
+
+<nav class="table-of-contents">
+
+- [Modernizing a Stale Nuxt 2 Blog: The Technical Plan](#modernizing-a-stale-nuxt-2-blog-the-technical-plan)
+  - [The technical decisions that shaped the plan](#the-technical-decisions-that-shaped-the-plan)
+    - [Most of the code changes will be done with agents](#most-of-the-code-changes-will-be-done-with-agents)
+    - [I’m replacing `nvm` with `mise`](#im-replacing-nvm-with-mise)
+    - [Ramda is not surviving the migration](#ramda-is-not-surviving-the-migration)
+    - [Cloudinary is the biggest real risk](#cloudinary-is-the-biggest-real-risk)
+    - [oxlint is interesting, but not enough on its own](#oxlint-is-interesting-but-not-enough-on-its-own)
+    - [I’m not adopting oxfmt yet](#im-not-adopting-oxfmt-yet)
+    - [TypeScript comes after v2.0.0](#typescript-comes-after-v200)
+  - [The risks I wanted to name before starting](#the-risks-i-wanted-to-name-before-starting)
+    - [1. The Cloudinary build pipeline](#1-the-cloudinary-build-pipeline)
+    - [2. Dynamic SVG loading](#2-dynamic-svg-loading)
+    - [3. Vue components embedded in markdown](#3-vue-components-embedded-in-markdown)
+    - [4. The catch-all route migration](#4-the-catch-all-route-migration)
+    - [5. Firebase output assumptions](#5-firebase-output-assumptions)
+  - [The rollout plan: 20 PRs in 5 phases](#the-rollout-plan-20-prs-in-5-phases)
+    - [Phase A — Stabilization (PRs 1–6)](#phase-a--stabilization-prs-16)
+    - [Phase B — Framework Migration (PRs 7–8)](#phase-b--framework-migration-prs-78)
+    - [Phase C — Module \& Feature Migration (PRs 9–14)](#phase-c--module--feature-migration-prs-914)
+    - [Phase D — Ship (PRs 15–16)](#phase-d--ship-prs-1516)
+    - [Phase E — Post-v2.0.0 Enhancements (PRs 17–20)](#phase-e--post-v200-enhancements-prs-1720)
+  - [What success looks like](#what-success-looks-like)
+  - [What comes next](#what-comes-next)
+
+</nav>
+
 # Modernizing a Stale Nuxt 2 Blog: The Technical Plan
 
 *Tool decisions, real risks, and a 20-PR rollout — the specifics I locked in before writing any code.*
@@ -65,9 +96,7 @@ My plan is to split the concern in two:
 
 That keeps Cloudinary as the backend without keeping the abandoned framework-specific layer.
 
-> **Image note:** A small architecture diagram could work here.  
-> Suggested concept: old flow (`@nuxtjs/cloudinary` doing everything) versus new split flow (`@nuxt/image` for delivery + Cloudinary SDK for uploads).  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-02--planning/cloudinary-migration-diagram.jpg`
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/cloudinary-migration" alt="Cloudinary versus @nuxt/image for image uploads" width="1536" height="1024"></post-image>
 
 ### oxlint is interesting, but not enough on its own
 
@@ -156,9 +185,7 @@ Nuxt 4 generates to `.output/public/` by default. My current `firebase.json` poi
 
 Small detail. Easy fix. Still exactly the kind of detail that will happily waste your time at the end if you do not track it up front.
 
-> **Image note:** A “risk map” graphic could fit nicely here.  
-> Suggested concept: a simple checklist or annotated diagram calling out Cloudinary, SVG loading, markdown components, route migration, and Firebase output.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-02--planning/migration-risk-map.jpg`
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/risk-checklist" alt="A checklist calling out risks with Cloudinary, SVG loading, markdown components, route migration, and Firebase output." width="1536" height="1024"></post-image>
 
 ## The rollout plan: 20 PRs in 5 phases
 
@@ -209,9 +236,7 @@ This is not process for process’s sake.
 
 It is how I keep agent-generated work reviewable, reversible, and understandable. If the agents are going to do a lot of the typing, I need the structure to do even more of the thinking.
 
-> **Image note:** This is a strong place for a roadmap-style visual.  
-> Suggested concept: a five-phase timeline with the 20 PRs grouped visually.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-02--planning/modernization-roadmap.jpg`
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/roadmap" alt="A human navigating a roadmap with a helping agent" width="1536" height="1024"></post-image>
 
 ## What success looks like
 
@@ -248,17 +273,4 @@ Not with the biggest migration step. Not with the most exciting one.
 
 With the one that gives every later change something solid to compare against.
 
-Step 3: Tagging the starting line →
-
----
-
----
-
-## Image asset suggestions
-
-- `static/images/posts/tech/modernizing-my-blog--step-02--planning/featured-image.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-02--planning/cloudinary-migration-diagram.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-02--planning/migration-risk-map.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-02--planning/modernization-roadmap.jpg`
-
-<!-- Links reference -->
+**Step 3: Tagging the starting line**

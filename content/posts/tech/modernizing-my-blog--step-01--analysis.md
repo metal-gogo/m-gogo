@@ -107,7 +107,7 @@ Nuxt Bridge is the standard cautious path for Nuxt 2 apps with real framework co
 
 Skip the intermediate layer and move directly to the modern stack. Only viable if the app is small and legible enough to see the full migration surface clearly.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/migration-options-diagram" alt="Three migration paths: Stabilize first, Nuxt Bridge, and Direct migration — with the chosen path highlighted" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/migration-options-diagram" alt="Three migration paths: Stabilize first, Nuxt Bridge, and Direct migration — with the chosen paths highlighted" width="1536" height="1024"></post-image>
 
 ## What I chose
 
