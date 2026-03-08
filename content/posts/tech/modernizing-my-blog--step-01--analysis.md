@@ -6,6 +6,8 @@ category: "tech"
 isDraft: true
 ---
 
+This is about a small personal blog I built, mostly abandoned, and eventually decided to fix — with AI handling more of the typing than usual, and judgment doing all of the thinking.
+
 <!-- omit in toc -->
 ## Content 
 

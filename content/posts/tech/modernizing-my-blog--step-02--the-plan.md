@@ -6,6 +6,8 @@ category: "tech"
 isDraft: true
 ---
 
+Deciding to modernize is easy. Deciding how to do it without turning a small upgrade into a sprawling rewrite is the part that requires an actual plan.
+
 <!-- omit in toc -->
 ## Content 
 
