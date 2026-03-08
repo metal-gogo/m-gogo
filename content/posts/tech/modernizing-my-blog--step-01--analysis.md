@@ -1,5 +1,5 @@
 ---
-title: "How I’m Modernizing a Small, Stale Nuxt 2 Blog Without Turning It Into a Mess"
+title: "Modernizing a Stale Nuxt 2 Blog: The First Analysis"
 summary: "How I’m using agents, small PRs, and a lot of restraint to revive an abandoned side project."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image.jpg"
 category: "tech"
@@ -32,10 +32,7 @@ That is what this post is about.
 
 Before I start letting agents tear through the repo, I wanted a plan that matched the actual size and shape of the codebase.
 
-> **Image note:** A strong featured image could go here in the final published version.  
-> Suggested concept: an old small blog app being rebuilt piece by piece, or a “before/after” visual mixing Nuxt 2 and modern tooling.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image.jpg`
-
+<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image" alt="A Nuxt 2 blog being modernized piece by piece" width="2048" height="1365"></post-image>
 ## Why I’m bringing it back now
 
 The honest answer is not “because the blog broke.”
@@ -73,9 +70,7 @@ Here is what stood out immediately:
 
 None of that means the site is unusable. It means it is old in the worst way: old enough that the next change is harder than it should be.
 
-> **Image note:** A dependency/stack snapshot image could work well here.  
-> Suggested concept: a simple diagram or screenshot-style visual showing `Nuxt 2`, `Vue 2`, `Node 14`, stale dependencies, and old CI.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-01--analysis/stale-stack-overview.jpg`
+<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/stale-stack-overview" alt="The stale stack: Nuxt 2, Vue 2, Node 14, and outdated CI" width="2048" height="1365"></post-image>
 
 ## The three options I considered
 
@@ -93,9 +88,7 @@ Nuxt Bridge is the standard cautious path for Nuxt 2 apps with real framework co
 
 Skip the intermediate layer and move directly to the modern stack. Only viable if the app is small and legible enough to see the full migration surface clearly.
 
-> **Image note:** A 3-path decision diagram would fit nicely here.  
-> Suggested concept: three branches labeled `Stabilize first`, `Nuxt Bridge`, and `Direct migration`, with the chosen path highlighted.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-01--analysis/migration-options-diagram.jpg`
+<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/migration-options-diagram" alt="Three migration paths: Stabilize first, Nuxt Bridge, and Direct migration — with the chosen path highlighted" width="1536" height="1024"></post-image>
 
 ## What I chose
 
@@ -133,23 +126,9 @@ I split it into two phases:
 
 That split matters. When a migration fails, “something broke” is not useful information. I want to know whether the breakage came from composable and config changes, or from layout and convention changes. Smaller steps make cause and effect easier to see.
 
-> **Image note:** A phased migration visual could go well here.  
-> Suggested concept: two stacked boxes or timeline steps showing `PR 7: Nuxt 3 core migration` and `PR 8: Nuxt 4 structural migration`.  
-> Suggested path: `static/images/posts/tech/modernizing-my-blog--step-01--analysis/nuxt3-to-nuxt4-phases.jpg`
 
 ## What comes next
 
 With the strategy decided, the next post gets into the specifics: the technical decisions I locked in before writing any code, the exact risks I wanted to track up front, and the full 20-PR rollout plan.
 
-Step 2: The plan →
-
----
-
-## Image asset suggestions
-
-- `static/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-01--analysis/stale-stack-overview.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-01--analysis/migration-options-diagram.jpg`
-- `static/images/posts/tech/modernizing-my-blog--step-01--analysis/nuxt3-to-nuxt4-phases.jpg`
-
-<!-- Links reference -->
+**Step 2: The plan**
