@@ -32,7 +32,6 @@
     "core-js": "^3.20.1",
     "glob": "^7.2.0",
     "nuxt": "^2.18.1",
-    "postcss": "^8.4.0",
     "prism-themes": "^1.9.0",
     "ramda": "^0.27.1"
   },
@@ -59,6 +58,7 @@
     "jest": "^26.5.0",
     "jest-transform-stub": "^2.0.0",
     "lint-staged": "^12.3.1",
+    "postcss": "^8.4.0",
     "prettier": "^2.5.1",
     "sass": "^1.45.2",
     "sass-loader": "^10.1.1",
