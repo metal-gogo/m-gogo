@@ -26,7 +26,7 @@ What makes this worth doing now is simple: modern AI tools changed the math.
 
 A few years ago, a project like this was easy to leave alone. It was too small to justify a big manual migration, but stale enough that touching it felt annoying and expensive. That balance has shifted. With agents handling a lot of the repetitive upgrade work, it is finally practical to revive the project instead of leaving it frozen or rewriting it from scratch.
 
-That does **not** mean the work is automatic. It just means the boring parts are cheaper. The judgment still matters: choosing the path, defining the boundaries, reviewing the diffs, rejecting bad shortcuts, and deciding what should happen now versus later.
+That does **not** mean the work is automatic. It just means the boring parts are cheaper. The judgment still matters.
 
 That is what this post is about.
 
@@ -72,10 +72,6 @@ Here is what stood out immediately:
 - The CI setup still assumes an old world.
 
 None of that means the site is unusable. It means it is old in the worst way: old enough that the next change is harder than it should be.
-
-That distinction matters.
-
-I am not reviving a broken project. I am reviving a neglected one.
 
 > **Image note:** A dependency/stack snapshot image could work well here.  
 > Suggested concept: a simple diagram or screenshot-style visual showing `Nuxt 2`, `Vue 2`, `Node 14`, stale dependencies, and old CI.  
