@@ -1,19 +1,19 @@
 ---
-title: "Modernizing a Stale Nuxt 2 Blog: The Node Upgrade"
-summary: "A one-line version bump that turned into four separate fixes — plus a stale CI overhaul and a pre-existing bug found along the way."
-featuredImage: "static/images/posts/tech/modernizing-my-blog--step-03--the-node-upgrade/featured-image.jpg"
+title: "Modernizing a Stale Nuxt 2 Blog: A New Publish Flow"
+summary: "Replacing stale CI actions, fixing Node 20 compatibility one layer at a time, and getting Firebase preview deploys working again."
+featuredImage: "static/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image.jpg"
 category: "tech"
 isDraft: true
 ---
 
-The plan said to tag the baseline and bump Node. The tagging was straightforward. The Node bump was not.
+The plan said to tag the baseline and bump Node. The tagging was straightforward. Getting the publish pipeline working again was not.
 
 <!-- omit in toc -->
 ## Content
 
 <nav class="table-of-contents">
 
-- [Modernizing a Stale Nuxt 2 Blog: The Node Upgrade](#modernizing-a-stale-nuxt-2-blog-the-node-upgrade)
+- [Modernizing a Stale Nuxt 2 Blog: A New Publish Flow](#modernizing-a-stale-nuxt-2-blog-a-new-publish-flow)
   - [What this step was supposed to be](#what-this-step-was-supposed-to-be)
   - [The four things that broke](#the-four-things-that-broke)
     - [1. fibers is incompatible with Node 16+](#1-fibers-is-incompatible-with-node-16)
@@ -31,9 +31,9 @@ The plan said to tag the baseline and bump Node. The tagging was straightforward
 
 </nav>
 
-# Modernizing a Stale Nuxt 2 Blog: The Node Upgrade
+# Modernizing a Stale Nuxt 2 Blog: A New Publish Flow
 
-*A one-line version bump that turned into four separate fixes — plus a stale CI overhaul and a pre-existing bug found along the way.*
+*Replacing stale CI actions, fixing Node 20 compatibility one layer at a time, and getting Firebase preview deploys working again.*
 
 In the previous post I laid out the full technical plan: the 20 PRs, the five phases, the risks I wanted to track before writing any code. Phase A starts with stabilization. The first real code change was supposed to be mechanical: tag the baseline, bump the Node version, update CI, and remove `fibers`.
 
@@ -41,7 +41,7 @@ That part was fine.
 
 The part that was not fine was everything the Node bump pulled out of the walls.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--the-node-upgrade/featured-image" alt="A dependency chain unraveling after a Node version bump" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image" alt="A dependency chain unraveling after a Node version bump" width="1536" height="1024"></post-image>
 
 ## What this step was supposed to be
 
@@ -102,7 +102,7 @@ This only surfaces on newer Node versions because of changes in how webpack 4 va
 
 The fix was upgrading Nuxt from `2.15.8` to `2.18.1`, which ships a corrected webpack config. That is the last official Nuxt 2 release and the version we should be on anyway.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--the-node-upgrade/dependency-cascade" alt="Four problems surfacing in sequence: fibers, OpenSSL, webpack rule conflict, PostCSS" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/dependency-cascade" alt="Four problems surfacing in sequence: fibers, OpenSSL, webpack rule conflict, PostCSS" width="1536" height="1024"></post-image>
 
 ### 4. PostCSS 7 was being hoisted over PostCSS 8
 
