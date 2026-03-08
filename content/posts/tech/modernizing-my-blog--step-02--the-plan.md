@@ -1,7 +1,7 @@
 ---
 title: "Modernizing a Stale Nuxt 2 Blog: The Technical Plan"
 summary: "Tool decisions, real risks, and a 20-PR rollout — the specifics I locked in before writing any code."
-featuredImage: "static/images/posts/tech/modernizing-my-blog--step-02--planning/featured-image.jpg"
+featuredImage: "static/images/posts/tech/modernizing-my-blog--step-02--the-plan/featured-image.jpg"
 category: "tech"
 isDraft: true
 ---
@@ -98,7 +98,7 @@ My plan is to split the concern in two:
 
 That keeps Cloudinary as the backend without keeping the abandoned framework-specific layer.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/cloudinary-migration" alt="Cloudinary versus @nuxt/image for image uploads" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--the-plan/cloudinary-migration" alt="Cloudinary versus @nuxt/image for image uploads" width="1536" height="1024"></post-image>
 
 ### oxlint is interesting, but not enough on its own
 
@@ -187,7 +187,7 @@ Nuxt 4 generates to `.output/public/` by default. My current `firebase.json` poi
 
 Small detail. Easy fix. Still exactly the kind of detail that will happily waste your time at the end if you do not track it up front.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/risk-checklist" alt="A checklist calling out risks with Cloudinary, SVG loading, markdown components, route migration, and Firebase output." width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--the-plan/risk-checklist" alt="A checklist calling out risks with Cloudinary, SVG loading, markdown components, route migration, and Firebase output." width="1536" height="1024"></post-image>
 
 ## The rollout plan: 20 PRs in 5 phases
 
@@ -238,7 +238,7 @@ This is not process for process’s sake.
 
 It is how I keep agent-generated work reviewable, reversible, and understandable. If the agents are going to do a lot of the typing, I need the structure to do even more of the thinking.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-02--planning/roadmap" alt="A human navigating a roadmap with a helping agent" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-02--the-plan/roadmap" alt="A human navigating a roadmap with a helping agent" width="1536" height="1024"></post-image>
 
 ## What success looks like
 
