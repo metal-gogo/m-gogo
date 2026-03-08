@@ -6,6 +6,24 @@ category: "tech"
 isDraft: true
 ---
 
+<!-- omit in toc -->
+## Content 
+
+<nav class="table-of-contents">
+
+- [How I’m Modernizing a Small, Stale Nuxt 2 Blog Without Turning It Into a Mess](#how-im-modernizing-a-small-stale-nuxt-2-blog-without-turning-it-into-a-mess)
+  - [Why I’m bringing it back now](#why-im-bringing-it-back-now)
+  - [What had gone stale](#what-had-gone-stale)
+  - [The three options I considered](#the-three-options-i-considered)
+    - [Option A — Stabilize first, then migrate](#option-a--stabilize-first-then-migrate)
+    - [Option B — Use Nuxt Bridge as an intermediate step](#option-b--use-nuxt-bridge-as-an-intermediate-step)
+    - [Option C — Migrate directly to a modern stack](#option-c--migrate-directly-to-a-modern-stack)
+  - [What I chose](#what-i-chose)
+    - [Why Nuxt 4, not Nuxt 3](#why-nuxt-4-not-nuxt-3)
+  - [What comes next](#what-comes-next)
+
+</nav>
+
 # How I’m Modernizing a Small, Stale Nuxt 2 Blog Without Turning It Into a Mess
 
 *How I’m using agents, small PRs, and a lot of restraint to revive an abandoned side project.*
@@ -32,7 +50,8 @@ That is what this post is about.
 
 Before I start letting agents tear through the repo, I wanted a plan that matched the actual size and shape of the codebase.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image" alt="A Nuxt 2 blog being modernized piece by piece" width="2048" height="1365"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image" alt="A Nuxt 2 blog being modernized piece by piece" width="1536" height="1024"></post-image>
+
 ## Why I’m bringing it back now
 
 The honest answer is not “because the blog broke.”
