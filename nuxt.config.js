@@ -151,11 +151,7 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-    loaders: {
-      scss: { implementation: require('sass') },
-    },
-  },
+  build: {},
 
   hooks: {
     'content:file:beforeInsert': async (document) => {
