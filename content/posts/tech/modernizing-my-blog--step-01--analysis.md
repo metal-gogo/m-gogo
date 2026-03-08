@@ -3,7 +3,6 @@ title: "Modernizing a Stale Nuxt 2 Blog: The First Analysis"
 summary: "How I’m using agents, small PRs, and a lot of restraint to revive an abandoned side project."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-01--analysis/featured-image.jpg"
 category: "tech"
-isDraft: true
 ---
 
 This is about a small personal blog I built, mostly abandoned, and eventually decided to fix — with AI handling more of the typing than usual, and judgment doing all of the thinking.
