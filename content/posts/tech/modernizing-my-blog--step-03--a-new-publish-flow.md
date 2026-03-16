@@ -61,7 +61,7 @@ What it actually turned into was an unplanned dependency investigation with four
 
 ## The four things that broke
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/dependency-cascade-diagram" alt="Dependency cascade triggered by a Node upgrade: fibers incompatibility, OpenSSL 3 breaking webpack 4, Nuxt webpack rule conflict, and PostCSS 7 hoisting over PostCSS 8." width="1536" height="1024"/>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/dependency-cascade-diagram" alt="Dependency cascade triggered by a Node upgrade: fibers incompatibility, OpenSSL 3 breaking webpack 4, Nuxt webpack rule conflict, and PostCSS 7 hoisting over PostCSS 8." width="1536" height="1024"></post-image>
 
 ### 1. fibers is incompatible with Node 16+
 
@@ -123,7 +123,7 @@ With PostCSS 8 pinned, the build completed cleanly.
 
 The broken dependency chain was not the only problem waiting in the project. The CI setup had its own category of neglect.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/ci-overhaul-comparison" alt="Comparison of outdated and modern GitHub Actions workflows, showing old actions and inconsistent Node versions versus standardized Node 20 workflows and updated actions." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/ci-overhaul-comparison" alt="Comparison of outdated and modern GitHub Actions workflows, showing old actions and inconsistent Node versions versus standardized Node 20 workflows and updated actions." width="1536" height="1024"></post-image>
 
 ### Stale action versions
 
@@ -149,7 +149,7 @@ Firebase CLI v15.9.0 is incompatible with Node.js v18.20.8
 Please upgrade Node.js to version >=20.0.0 || >=22.0.0 || >=24.0.0
 ```
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/firebase-preview-deploy-problem" alt="Firebase Hosting preview deploy blocked by Firebase CLI requiring Node 20, preventing deployments running on Node 18." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/firebase-preview-deploy-problem" alt="Firebase Hosting preview deploy blocked by Firebase CLI requiring Node 20, preventing deployments running on Node 18." width="1536" height="1024"></post-image>
 
 `firebase-tools@latest` — which the `FirebaseExtended/action-hosting-deploy@v0` action installs at runtime — had dropped support for Node 18.
 
@@ -159,7 +159,7 @@ Node 20 is the active LTS. The `NODE_OPTIONS` workaround still applies there. Th
 
 ### Standardizing everything to Node 20
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/node-version-standardization" alt="All project environments aligned to Node 20 including local development, CI workflows, Firebase deploy pipelines, and regenerated lockfile." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/node-version-standardization" alt="All project environments aligned to Node 20 including local development, CI workflows, Firebase deploy pipelines, and regenerated lockfile." width="1536" height="1024"></post-image>
 
 With the firebase requirement pulling Node to 20, it made sense to align everything at once rather than running different versions in different workflows.
 
@@ -175,7 +175,7 @@ The `package-lock.json` was also regenerated from scratch on Node 20 to clear an
 
 ## A bug found during generate
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/generate-only-bug-discovery" alt="Static generation revealing a hidden bug where a route fails during build even though local development works." width="1024" height="1536" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/generate-only-bug-discovery" alt="Static generation revealing a hidden bug where a route fails during build even though local development works." width="1024" height="1536"></post-image>
 
 Running `npm run generate` after the stack was stable revealed a pre-existing bug that had nothing to do with the Node upgrade.
 
@@ -195,7 +195,7 @@ The cause was in `pages/about-me.vue`. The `asyncData` function fetches recent p
 .only(['title', 'slug', 'path', 'summary', 'featuredImage', 'createdAt'])
 ```
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/missing-field-bug" alt="Content query missing the path field causing nuxt-link to receive undefined and crash during static generation." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/missing-field-bug" alt="Content query missing the path field causing nuxt-link to receive undefined and crash during static generation." width="1536" height="1024"></post-image>
 
 Without `path`, the link received `undefined` and vue-router crashed during SSR normalization. The fix was one field added to one array.
 
@@ -219,7 +219,7 @@ Two other small changes came along with this PR.
 
 VS Code's auto-migration had already updated this locally, so committing it just stopped the file showing as perpetually dirty in git.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/small-fixes-snapshot" alt="Small maintenance fixes including adding an env example file, updating VS Code ESLint settings, and minor configuration cleanup." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/small-fixes-snapshot" alt="Small maintenance fixes including adding an env example file, updating VS Code ESLint settings, and minor configuration cleanup." width="1536" height="1024"></post-image>
 
 ## What came out the other side
 
@@ -235,7 +235,7 @@ That is more work than "bump the Node version" sounds like. But it is the right 
 
 Everything broken by the Node upgrade was worth finding before the framework migration. Any of those issues landing in the middle of a Nuxt 3 migration would have made root-cause analysis harder and the PR diffs bigger.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/stabilization-summary" alt="Project stabilization after Node 20 migration with working local builds, successful static generation, restored Firebase deploys, and green CI pipelines." width="1024" height="1536" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/stabilization-summary" alt="Project stabilization after Node 20 migration with working local builds, successful static generation, restored Firebase deploys, and green CI pipelines." width="1024" height="1536"></post-image>
 
 ## What comes next
 
@@ -245,4 +245,4 @@ The next PR removes dead code, fixes a few small bugs that have been accumulatin
 
 Small things first. That is the discipline.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/what-comes-next" alt="Roadmap from publish flow stabilization to the next phase of the project: removing dead code and cleaning up dependencies." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/what-comes-next" alt="Roadmap from publish flow stabilization to the next phase of the project: removing dead code and cleaning up dependencies." width="1536" height="1024"></post-image>
