@@ -219,7 +219,7 @@ Two other small changes came along with this PR.
 
 VS Code's auto-migration had already updated this locally, so committing it just stopped the file showing as perpetually dirty in git.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/small-fixes" alt="Small maintenance fixes including adding an env example file, updating VS Code ESLint settings, and minor configuration cleanup." width="1536" height="1024" />
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/small-fixes-snapshot" alt="Small maintenance fixes including adding an env example file, updating VS Code ESLint settings, and minor configuration cleanup." width="1536" height="1024" />
 
 ## What came out the other side
 
