@@ -1,9 +1,9 @@
 ---
-title: "Modernizing a Stale Nuxt 2 Blog: A New Publish Flow"
+title: "Modernizing my blog (Step 3): A New Publish Flow"
 summary: "Replacing stale CI actions, fixing Node 20 compatibility one layer at a time, and getting Firebase preview deploys working again."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image.jpg"
 category: "tech"
-isDraft: true
+
 ---
 
 The plan said to tag the baseline and bump Node. The tagging was straightforward. Getting the publish pipeline working again was not.
@@ -41,7 +41,8 @@ That part was fine.
 
 The part that was not fine was everything the Node bump pulled out of the walls.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image" alt="A dependency chain unraveling after a Node version bump" width="1536" height="1024"></post-image>
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image" alt="Dependency chain breaking after a Node upgrade in a Nuxt 2 project, affecting CI, Firebase deploys, webpack, and project dependencies." width="1536" height="1024"></post-image>
+
 
 ## What this step was supposed to be
 
@@ -59,6 +60,8 @@ None of those tasks are interesting individually. A Node bump on a Nuxt 2 projec
 What it actually turned into was an unplanned dependency investigation with four distinct root causes, each of which only became visible after fixing the one before it.
 
 ## The four things that broke
+
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/dependency-cascade-diagram" alt="Dependency cascade triggered by a Node upgrade: fibers incompatibility, OpenSSL 3 breaking webpack 4, Nuxt webpack rule conflict, and PostCSS 7 hoisting over PostCSS 8." width="1536" height="1024"/>
 
 ### 1. fibers is incompatible with Node 16+
 
@@ -102,8 +105,6 @@ This only surfaces on newer Node versions because of changes in how webpack 4 va
 
 The fix was upgrading Nuxt from `2.15.8` to `2.18.1`, which ships a corrected webpack config. That is the last official Nuxt 2 release and the version we should be on anyway.
 
-<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/dependency-cascade" alt="Four problems surfacing in sequence: fibers, OpenSSL, webpack rule conflict, PostCSS" width="1536" height="1024"></post-image>
-
 ### 4. PostCSS 7 was being hoisted over PostCSS 8
 
 Nuxt 2.18 uses PostCSS 8 internally through its own plugin system. After upgrading Nuxt, the next build failure was:
@@ -121,6 +122,8 @@ With PostCSS 8 pinned, the build completed cleanly.
 ## The CI overhaul
 
 The broken dependency chain was not the only problem waiting in the project. The CI setup had its own category of neglect.
+
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/ci-overhaul-comparison" alt="Comparison of outdated and modern GitHub Actions workflows, showing old actions and inconsistent Node versions versus standardized Node 20 workflows and updated actions." width="1536" height="1024" />
 
 ### Stale action versions
 
@@ -146,6 +149,8 @@ Firebase CLI v15.9.0 is incompatible with Node.js v18.20.8
 Please upgrade Node.js to version >=20.0.0 || >=22.0.0 || >=24.0.0
 ```
 
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/firebase-preview-deploy-problem" alt="Firebase Hosting preview deploy blocked by Firebase CLI requiring Node 20, preventing deployments running on Node 18." width="1536" height="1024" />
+
 `firebase-tools@latest` — which the `FirebaseExtended/action-hosting-deploy@v0` action installs at runtime — had dropped support for Node 18.
 
 There were two options: pin firebase-tools to an older version, or bump Node to 20. Pinning a tool to avoid an upgrade creates a problem to manage later. Bumping Node to 20 is the right direction anyway.
@@ -153,6 +158,8 @@ There were two options: pin firebase-tools to an older version, or bump Node to 
 Node 20 is the active LTS. The `NODE_OPTIONS` workaround still applies there. The dependency compatibility issues are the same. There was no reason to stay at 18.
 
 ### Standardizing everything to Node 20
+
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/node-version-standardization" alt="All project environments aligned to Node 20 including local development, CI workflows, Firebase deploy pipelines, and regenerated lockfile." width="1536" height="1024" />
 
 With the firebase requirement pulling Node to 20, it made sense to align everything at once rather than running different versions in different workflows.
 
@@ -167,6 +174,8 @@ All five configuration points now use Node 20:
 The `package-lock.json` was also regenerated from scratch on Node 20 to clear any lingering artifacts from the Node 14 install tree.
 
 ## A bug found during generate
+
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/generate-only-bug-discovery" alt="Static generation revealing a hidden bug where a route fails during build even though local development works." width="1024" height="1536" />
 
 Running `npm run generate` after the stack was stable revealed a pre-existing bug that had nothing to do with the Node upgrade.
 
@@ -185,6 +194,8 @@ The cause was in `pages/about-me.vue`. The `asyncData` function fetches recent p
 // after
 .only(['title', 'slug', 'path', 'summary', 'featuredImage', 'createdAt'])
 ```
+
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/missing-field-bug" alt="Content query missing the path field causing nuxt-link to receive undefined and crash during static generation." width="1536" height="1024" />
 
 Without `path`, the link received `undefined` and vue-router crashed during SSR normalization. The fix was one field added to one array.
 
@@ -208,6 +219,8 @@ Two other small changes came along with this PR.
 
 VS Code's auto-migration had already updated this locally, so committing it just stopped the file showing as perpetually dirty in git.
 
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/small-fixes" alt="Small maintenance fixes including adding an env example file, updating VS Code ESLint settings, and minor configuration cleanup." width="1536" height="1024" />
+
 ## What came out the other side
 
 After this PR, the project can:
@@ -222,6 +235,8 @@ That is more work than "bump the Node version" sounds like. But it is the right 
 
 Everything broken by the Node upgrade was worth finding before the framework migration. Any of those issues landing in the middle of a Nuxt 3 migration would have made root-cause analysis harder and the PR diffs bigger.
 
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/stabilization-summary" alt="Project stabilization after Node 20 migration with working local builds, successful static generation, restored Firebase deploys, and green CI pipelines." width="1024" height="1536" />
+
 ## What comes next
 
 With the project baseline stable and the Node version current, the Phase A cleanup continues.
@@ -230,4 +245,4 @@ The next PR removes dead code, fixes a few small bugs that have been accumulatin
 
 Small things first. That is the discipline.
 
-**Step 4: Dead code removal and dependency cleanup**
+<post-image src="/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/what-comes-next" alt="Roadmap from publish flow stabilization to the next phase of the project: removing dead code and cleaning up dependencies." width="1536" height="1024" />

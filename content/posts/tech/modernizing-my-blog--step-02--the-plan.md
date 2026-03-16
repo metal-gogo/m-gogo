@@ -1,8 +1,9 @@
 ---
-title: "Modernizing a Stale Nuxt 2 Blog: The Technical Plan"
+title: "Modernizing my blog (Step 2): The Technical Plan"
 summary: "Tool decisions, real risks, and a 20-PR rollout — the specifics I locked in before writing any code."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-02--the-plan/featured-image.jpg"
 category: "tech"
+
 ---
 
 Deciding to modernize is easy. Deciding how to do it without turning a small upgrade into a sprawling rewrite is the part that requires an actual plan.
