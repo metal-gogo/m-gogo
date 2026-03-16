@@ -1,5 +1,5 @@
 ---
-title: "Modernizing my blog (Step 2): The Technical Plan"
+title: "Modernizing my blog [Step 2]: The Technical Plan"
 summary: "Tool decisions, real risks, and a 20-PR rollout — the specifics I locked in before writing any code."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-02--the-plan/featured-image.jpg"
 category: "tech"

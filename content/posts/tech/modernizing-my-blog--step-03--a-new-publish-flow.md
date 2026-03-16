@@ -1,5 +1,5 @@
 ---
-title: "Modernizing my blog (Step 3): A New Publish Flow"
+title: "Modernizing my blog [Step 3]: A New Publish Flow"
 summary: "Replacing stale CI actions, fixing Node 20 compatibility one layer at a time, and getting Firebase preview deploys working again."
 featuredImage: "static/images/posts/tech/modernizing-my-blog--step-03--a-new-publish-flow/featured-image.jpg"
 category: "tech"
