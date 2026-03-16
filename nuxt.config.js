@@ -29,15 +29,7 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        // Analytics with plausible (https://plausible.io/)
-        src: 'https://plausible.io/js/plausible.js',
-        'data-domain': 'mgogo.dev',
-        async: true,
-        defer: true,
-      },
-    ],
+    script: [],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

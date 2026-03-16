@@ -20,8 +20,6 @@ There are several moving pieces on this blog, and it could change in the future.
 - [SCSS][scss]. A feature rich, and mature CSS pre-processor.
 - [Ramda][ramda]. A JavaScript utility library with a functional programming approach to avoid side effects.
 - [Google fonts][google_fonts]. A repository of open source fonts, powered by Google.
-- [Plausible][plausible]. A a lightweight and open-source website analytics tool. No cookies and fully compliant with GDPR, CCPA and PECR.
-
 <!-- Links reference -->
 
 [git]: https://git-scm.com/
@@ -37,4 +35,3 @@ There are several moving pieces on this blog, and it could change in the future.
 [scss]: https://sass-lang.com/
 [ramda]: https://ramdajs.com/
 [google_fonts]: https://fonts.google.com/
-[plausible]: https://plausible.io/
